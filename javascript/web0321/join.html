@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+  <style>
+
+  table{
+    /*border-collapse: collapse;*/
+    width : 500px;
+    margin : 0 auto;
+  }
+  tr{
+    width  : 100%;
+
+  }
+  td{
+    border : 1px solid;
+  }
+
+</style>
+</head>
+<body>
+  <form action="joinOk.php" method="post" name="joinForm" id="joinForm">
+    <table>
+      <tr>
+        <td colspan="2">회원 가입</td>
+      </tr>
+      <tr>
+        <td width="20%"><label for="name">이름</label></td>
+        <td width="80%"><input type="text" name="name" id="name"></td>
+      </tr>
+      <tr>
+        <td><label for="id">아이디</label></td>
+        <td><input type="text" name="id" id="id"></td>
+      </tr>
+      <tr>
+        <td><label for="">비밀번호</label></td>
+        <td><input type="password" name="password" id="password"></td>
+      </tr>
+      <tr>
+        <td><label for="">핸드폰</label></td>
+        <td><input type="text" name="phone" id="phone"></td>
+      </tr>
+      <tr>
+        <td><label for="">취미</label></td>
+        <td>
+          <input type="radio" name="hobbys" value="hobbys_1">축구<br>
+          <input type="radio" name="hobbys" value="hobbys_2">족구<br>
+          <input type="radio" name="hobbys" value="hobbys_3">수구<br>
+          <input type="radio" name="hobbys" value="hobbys_4">피구<br>
+          <input type="radio" name="hobbys" value="hobbys_5">야구<br>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="">가입하기</label></td>
+        <td><input type="submit" value="회원가입Ok"></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

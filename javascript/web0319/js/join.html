@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>회원 가입</title>
+	<style>
+		table{
+			width: 100%;
+			
+		}
+		td{
+			border: 1px solid;
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="join" style="width:100%;max-width:800px;margin:0 auto">
+		<form action="joinOk.php" method="get" name="joinFrom" id="=joinForm">
+			<table>
+				<tr>
+					<td colspan="2">회원 가입</td>
+				</tr>
+				<tr>
+					<td width="20%">이름</td>
+					<td width="80%">
+						<input type="text" name="userName" id="userName">
+					</td>
+				</tr>
+				<tr>
+					<td>우편번호</td>
+					<td>
+						<input type="text" name="userAddress1" id="">-
+						<input type="text" name="userAddress2" id="">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>아이디</td>
+					<td>
+						<input type="text" name="userId" id="userId">
+						<input type="button" value="아이디체크" id="idChecked">
+					</td>
+				</tr>
+				<tr>
+					<td>별명</td>
+					<td><input type="text" name="alice" id="alice"></td>
+				</tr>
+				
+				<tr>
+					<td>비빌번호</td>
+					<td>
+						<input type="password" name="userPw" id="userPw"><br>
+						<input type="password" name="userPwChecked" id="userPwChecked"><br>
+						<span class="txt" style="color:#f00"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>비빌번호힌트</td>
+					<td>
+						<select name="userPwHint" id="userPwHint">
+							<option value="희망" selected>다시 태어나면 되고 싶은거?</option>
+							<option value="초등학교">초등학교 졸업한 학교명은?</option>
+						</select><br>
+						<input type="text" name="userPwHintTxt" id="userPwHintTxt" placeholder="답변을 입력합니다">
+						
+					</td>
+				</tr>
+				<tr>
+					<td>생년월일</td>
+					<td>
+						<input type="text" name="year" id="year" size="4" maxlength="4" placeholder="1900">년
+						<select name="month" id="month">
+							<option value="1" selected>01</option>
+							<option value="2">02</option>
+							<option value="3">03</option>
+							<option value="4">04</option>
+							<option value="5">05</option>
+							<option value="6">06</option>
+							<option value="7">07</option>
+							<option value="8">08</option>
+							<option value="9">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+						<select name="day" id="day">
+							<option value="1" selected>01</option>
+							<option value="2">02</option>
+							<option value="3">03</option>
+							<option value="4">04</option>
+							<option value="5">05</option>
+							<option value="6">06</option>
+							<option value="7">07</option>
+							<option value="8">08</option>
+							<option value="9">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+						
+					<input type="radio" name="day1" id="day1" value="new" checked>양
+					<input type="radio" name="day1" id="day2" value="old">음
+					</td>
+					
+					
+				</tr>
+				<tr>
+					<td>핸드폰</td>
+					<td>
+						<select name="userPhone1" id="userPhone1">
+							<option value="010" selected>010</option>
+							<option value="011">011</option>
+						</select>-
+						<input type="text" name="userPhone2" id="userPhone2">-
+						<input type="text" name="userPhone3" id="userPhone3">
+						
+						<input type="radio" name="phone" id="phone1" value="SKT" checked>SKT
+						<input type="radio" name="phone" id="phone2" value="LG">LG
+					</td>
+				</tr>
+				<tr>
+					<td>거주지</td>
+					<td>
+						<select name="userHouse" id="userHouse">
+							<option value="서울" selected>서울</option>
+							<option value="부산">부산</option>
+						</select>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>메일 수신 여부</td>
+					<td>
+						<input type="checkbox" name="userHobbys" value="news1">뉴스1<br>
+						<input type="checkbox" name="userHobbys" value="news2">뉴스2<br>
+						<input type="checkbox" name="userHobbys" value="news3">뉴스3<br>
+						<input type="checkbox" name="userHobbys" value="news4">뉴스4<br>
+						<input type="checkbox" name="userHobbys" value="news5">뉴스5<br>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" value="회원가입OK" id="submitBtn"></td>
+				</tr>
+				
+				
+			</table>			
+			
+			
+		</form>
+		
+		<script>
+			var submitBtn=document.getElementById('submitBtn');
+			var joinFrom=document.getElementsByName('joinFrom')[0];
+			
+			
+			submitBtn.addEventListener('click',formSubmit);
+			
+			
+			function formSubmit(){
+				console.log(joinFrom.userName.value);
+				
+				var userNameVal=joinFrom.userName.value;
+				var userIdVal=joinFrom.userId.value;
+				var userPwVal=joinFrom.userPw.value;
+				var userPwValChVal=joinFrom.userPwChecked.value;
+				var spanTxt=document.getElementsByClassName('txt')[0];
+				
+				if(userNameVal=="" || userNameVal==null){
+					
+					alert("이름 입력 오류입니다");
+					joinFrom.userName.focus();
+					
+					return;
+				}
+				
+				
+				if(userIdVal=="" || userIdVal==null){
+					
+					alert("아이디 입력 오류입니다");
+					joinFrom.userId.focus();
+					
+					return;
+				}
+				
+				if(userPwVal=="" || userPwVal==null){
+						
+					alert("비빌번호 입력 오류입니다");
+					joinFrom.userPw.focus();
+					
+					return;
+				}
+				
+				
+				
+				joinFrom.submit();// 서버에 전송
+				
+				
+			}
+			
+				
+			var pwKey=joinFrom.userPwChecked;
+
+			pwKey.addEventListener('keyup',userPwKeyUp)
+
+				function userPwKeyUp(){
+					
+					var userPwVal=joinFrom.userPw.value;
+				    var userPwValChVal=joinFrom.userPwChecked.value;
+					var spanTxt=document.getElementsByClassName('txt')[0];
+					
+					if(userPwVal==userPwValChVal){
+						spanTxt.style.color="#00f";
+						spanTxt.textContent="비빌번호가 맞습니다";
+
+					}else{
+						spanTxt.style.color="#f00";
+						spanTxt.textContent="비빌번호가 틀립니다";
+
+					}
+				}
+			
+			
+			
+//				
+//				if(userPwValChVal==userPwVal){
+//					spanTxt.textContent="비빌번호가 맞습니다"
+//				}
+				
+				
+				
+				
+//				if(joinFrom.day1[0].checked == false && joinFrom.day1[1].checked == false ){
+//					
+//					alert("생년월일 체크오류");
+//					joinFrom.day1[0].focus();
+//					
+//					return;
+//				}
+//				
+				
+				
+//			}
+			
+			
+			
+		
+		
+		
+		</script>
+						
+										
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

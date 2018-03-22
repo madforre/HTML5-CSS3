@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  button{
+
+    height : 50px;
+    background: #555;
+    color : #fff
+  }
+
+  </style>
+</head>
+<body>
+   <button>팝업창이 3초 후에 열리는 버튼</button>
+   <button>팝업창이 5초 후에 열리는 버튼</button>
+   <div id="box" class="box">box1</div>
+   <div id="box" class="box">box2</div>
+
+   <script>
+
+     var btn=document.getElementsByTagName('button');
+     btn[0].addEventListener('click',openEx);
+
+     function openEx(){
+       setTimeout(function(){
+         window.open("popup.html","","width=500,height=600,left=500,top=200");
+       },3000);
+     }
+
+     btn[1].addEventListener('click',openEx2);
+     function openEx2(){
+       function open(){
+         window.open("popup.html","","width=500,height=600,left=500,top=200");
+       }
+       setTimeout(open,5000);
+     }
+
+
+     document.querySelector('button');
+     // 배열이 아니라 첫번째꺼 하나만 선택한다. 첫번째 버튼 하나만
+     document.querySelectorAll('button')[0]
+     document.getElementsByTagName('button')[0];
+     // 인덱스 안써주면 배열이다. 인덱스로 첫번째를 선택했다.
+
+    //아이디 선택
+     document.querySelector("#box");
+     document.getElementById("box");
+     document.getElementsByTagName("div")[0];
+
+    //클래스 선택
+     document.querySelector('.box');
+     document.querySelectorAll('.box')[0];
+     document.getElementsByClassName('box')[0];
+
+   </script>
+
+
+</body>
+</html>

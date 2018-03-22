@@ -1,0 +1,243 @@
+﻿append(), prepend()
+animate()
+setInterval() <<>> clearInterval()
+
+----------------------------------------------------------
+
+
+변수 : "하나의 data를 저장 할 수 있는 저장공간"
+
+var num=10;// 변수 num을 선언했다.자료형이 숫자(number)인 10으로 초기화했다.
+
+num=100; // 변수num에 100을 대입한다. ( = 를 대입 연산자라고 한다.)
+
+data의 종류
+
+	number 숫자(정수, 실수)
+	string 문자열
+	object 객체
+	null 공간만 있고 값이 없는 것.
+
+	 예제
+
+	 var v0=10;              number
+	 var v1="jang"              string
+ 	 var v2=[1,2,3];               object
+ 	 var v3=new Date();               obejct
+
+
+변수 : 특수문자안되고 숫자가 앞에오면 안되고 공란안되고 대문자 소문자 구분한다.
+
+
+console.log();// ()값을 브라우저에 console에 표시
+document.write();// document에 표시
+alert();// 팝업창을 띄워라
+promt(); // 입력창 "결과값을 반환"
+confirm(); // 확인창  예, 아니오 "결과값을 반환"
+
+
+------------------------------------------------------
+
+논리 연산자 .....
+
+AND 연산자 && ( 왼쪽 먼저 계산하는데 왼쪽과 오른쪽이 둘다 트루이면 트루값 리턴)
+
+조건1 && 조건2  결과 값
+true		 true	   	true
+true     false    false
+false    true     false
+false    false    false
+
+ex) if (아이디 =="manso1" && 비밀번호=="1111") { } ;
+
+이런식으로 둘다 트루인 조건문을 만들어서 사용 가능하다!
+
+								window
+
+DOM              BOM                   내장객체
+
+
+윈도우 객체의 실제 모습
+
+window={
+					innerWidth,  // 속성(property), field   얘
+					alert=function(){ // 기능(매서드)        네
+					},                                      들
+					prompt=function(){                      은
+					},                                      B
+					confirm=function(){                     O
+					},                                      M
+					document={ // 객체   window.document.write();   얘
+								write=function(){                         네
+                                                          들
+								},                                        은
+								getElementById=function(){                 D
+								},                                         O
+					},                                               M
+
+};
+
+window.innerWidth; // 객체의 맴버에 접근하는 연산자는 .(점) 이다.
+window.alert();
+-------------------------------
+
+parseInt("111"); 문자를 숫자로 바꿔라
+
+
+대입 연산자 (=) " 오른쪽의 연산의 결과를 왼쪽 변수에 대입한다."
+	ex ) var num=100+22+(222+200);
+
+복합대입연산(할당연산자) "자신의 변수를 같은 값으로 변화"
+
+	총쏘는 원리!
+
+	+= num+=10;
+	-= num-=10;
+	*= num*=10;
+	/= num/=10;
+	%= num%=10;
+
+
+---------------------------------------------------
+
+
+var num=10;
+
+왼쪽의 num 은 저장 공간을 의미한다.
+
+num=num+10; // 10+10+10
+
+오른쪽의 num은 참조를 의미한다.
+
+-----------------------------------------------------
+
+or(||) "하나이상의 조건이 true이면 결과 값이 true"
+조건1 || 조건2 결과 값
+true		 true		true
+true		 false	true
+false			true	true
+false		false		false
+
+
+** 연산자 실행순서 >>> 괄호 먼저 처리하는 것이 상식이다!
+
+-------------------------------------------------------
+
+삼항연산자
+
+조건식 ? 조건true 일 때 실행 : 아닐 경우 실행
+
+var num=10;
+
+var result=num>10?1:0;
+
+-----------------------------------------------------
+
+
+조건 2개
+
+if(){
+
+}else{
+
+}
+
+
+조건 2개 이상, 여러개인 경우
+
+if(){
+}else if(조건){
+
+}
+
+switch 문
+
+switch(key){
+
+			case 0 : //key 값이 0이면
+					실행문;;//처리,구현
+			break; "break문 만나면 전체함수(로직)을 종료"
+
+			case 1 : //key 값이 1이면
+					실행문;;//처리,구현
+			break; "break문 만나면 전체함수(로직)을 종료"
+
+			case 2 : //key 값이 2이면
+					실행문;;//처리,구현
+			break; "break문 만나면 전체함수(로직)을 종료"
+
+			case 3 : //key 값이 3이면
+					실행문;;//처리,구현
+			break; "break문 만나면 전체함수(로직)을 종료"
+
+			default;
+						기본처리문;
+}
+
+
+switch 문은 break문을 써주자!
+
+---------------------------------------------------
+* 리턴(return)이 하는 일은 크게 메소드 종료, 값의 반환 두 가지로 나뉩니다.
+
+	값의 반환시 호출한 부분으로 인자로 받은 것을 반환합니다.
+
+	그러나 대부분 리턴한다 → 값을 반환한다라는 의미로 많이 쓰입니다. 그 안에 종료의 의미도 포함 되어 있는 것이죠
+
+	물론 return이 값의 반환 없이 메소드의 종료 역할을 할 때도 있습니다.
+
+	return : 메소드 종료 의미와 값의 반환의 의미를 가진다.
+---------------------------------------------------
+
+==자바스크립트 선택자 ==(중요) >>>> 이벤트를 통해서 함수를 구현
+
+이벤트 핸들러 >>> 이벤트를 구현 객체에 전달 해주는 역할
+>>. 구조를 변경...
+
+-----------------------------------------------------
+
+(자바스크립트 선택자)
+
+1. document.querySelector();
+
+		.querySelector()는 CSS 선택자로 요소를 선택하게 해줍니다.
+		주의할 점은 선택자에 해당하는 첫번째 요소만 선택한다는 것 입니다.
+		아이디,클래스,태그 하나를 선택하게 해준다.
+
+2. document.getElementById();
+
+	HTML element의 아이디를 리턴(반환)한다.
+
+3. document.getElementsByClassName();
+
+	HTML element의 클래스 이름을 리턴(반환)한다.
+
+4. document.getElementsByTagName();
+
+ 	HTML element의 태그 이름을 리턴(반환)한다.
+
+5. document.querySelectorAll();
+
+		.querySelectorAll()은 특정 CSS 선택자를 가진 모든 요소를 반환하는 속성입니다.
+
+		ex) document.querySelectorAll('.abc') 클래스 값이 abc인 모든 요소를 리턴(반환)합니다.
+
+
+			document.query.SelectorAll(".box")[0];
+  		box클래스 중에서 첫번째 멤버를 선택한다.
+			document.query.SelectorAll(".box")[1];
+  		box클래스 중에서 두번쩨 멤버를 선택한다.
+
+------------------------------------------------------
+
+document.querySelector(선택자); // 하나의 선택자를 지정하여 선택
+document.querySelectorAll(선택자); // 지정한 선택자를 여러개 동시에 선택
+document.querySelectorAll(선택자)[0]; // 지정한 선택자의 첫번째 맴버를 선택
+
+document.getElementById('아이디');// 아이디
+document.getElementsByClassName('클래스');// 클래스
+document.getElementsByClassName('클래스')[0]; // 클래스의 첫번째 멤버 선택
+document.getElementsByTagName('div');// 태그선택자이다. div 태그들 선택
+document.getElementsByTagName('div')[0]; // 태그선택자이다. div태그중 첫번째 멤버 선택
+
+document.getElementsByName('') // 폼태그 관련 네임 선택

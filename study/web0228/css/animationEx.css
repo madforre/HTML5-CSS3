@@ -1,0 +1,69 @@
+@charset "UTF-8";
+#wrap {
+  width : 100%;
+  height : auto;
+}
+.gallery {
+  width : 1000px;
+  height : 500px;
+  margin : 0 auto;
+  border : 10px solid;
+  position : relative;
+  overflow: hidden;
+}
+.gallery>ul {
+  width : 5000px;
+  height : auto;
+  background: #ccc;
+  overflow: hidden;
+  animation-name: autoGallery;
+  animation-duration: 10s;
+  animation-delay : 2s;
+  animation-iteration-count:infinite;
+}
+  @keyframes autoGallery{
+    0%{transform : translate(0,0)}
+    25%{transform : translate(-1000px,0)}
+    50%{transform : translate(-2000px,0)}
+    75%{transform : translate(-3000px,0)}
+    100%{transform : translate(-4000px,0)}
+}
+ul>li {
+  width : 1000px;
+  height : 500px;
+  border : 1px solid #f00;
+  float : left;
+  box-sizing: border-box;
+  font-size: 200px;
+  background-size : cover;
+}
+ul>li:nth-child(1){
+  background-image: url(../images/bg0.jpg);
+}
+ul>li:nth-child(2){
+  background-image: url(../images/bg1.jpg);
+}
+ul>li:nth-child(3){
+  background-image: url(../images/bg2.jpg);
+}
+ul>li:nth-child(4){
+  background-image: url(../images/bg3.jpg);
+}
+ul>li:nth-child(5){
+  background-image: url(../images/bg0.jpg);
+}
+.gallery>span.arrow {
+  display : block;
+  width : 50px;
+  height : 140px;
+  position: absolute;
+  top:180px;
+}
+.gallery span.arrow.left{
+  left : 50px;
+  background: #000;
+}
+.gallery span.arrow.right{
+  right : 50px;
+  background: #ff0;
+}

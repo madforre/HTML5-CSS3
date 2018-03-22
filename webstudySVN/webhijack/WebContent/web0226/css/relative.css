@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.parent {
+  width : 800px;
+  height : 600px;
+  border : 1px solid #f00;
+  position: relative;
+  margin : 0 auto;
+}
+
+.box {
+  width: 200px;
+  height : 200px;
+  border : 1px solid;
+  font-size : 50px;
+  text-align : center;
+  line-height: 200px;
+  color : #ccc;
+  position: absolute;
+
+}
+
+
+.box.box1{ background: #f00; left : 100px; top : 50px; z-index: 1;}
+.box.box2{ background: #ff0; left : 150px; top : 50px; z-index: 2;}
+.box.box3{ background: #00f; left : 200px; top : 50px; z-index: 3;}

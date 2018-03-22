@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+#wrap{
+  width : 100%;
+  height : auto;
+}
+
+.header {
+  width : 100%;
+  height : 45px;
+  background: #333;
+  position : fixed;
+  left:0;
+  top:0;
+}
+
+.section {
+  width : 100%;
+  height : auto;
+  text-align: center;
+  font-size : 50px;
+  box-sizing: border-box;
+}
+
+/*header 시작*/
+
+.gnb {
+width : 100%;
+max-width: 1000px;
+margin : 0 auto;
+overflow: hidden;
+line-height: 45px;
+}
+
+.gnb ul li {
+  width :10%;
+  float : left;
+  color : #fff;
+  font-size : 12px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/*section 시작*/
+
+.section.section1{
+  height : 650px;
+  background : #efe;
+  margin-top : 45px;
+  border : 5px solid #fff;
+}
+
+.section.section2{
+  height : 650px;
+  background : #ccc;
+  border : 5px solid #fff;
+}
+
+.section.section3{
+  height : auto;
+}
+
+.section.section3 ul li{
+  background: #fef;
+  width : 50%;
+  height : 500px;
+  float : left;
+  border : 5px solid #fff;
+  box-sizing: border-box;
+}

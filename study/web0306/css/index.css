@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#wrap {
+}
+
+ul {
+  width : 100%;
+  margin : 0 auto;
+  height : auto;
+}
+
+ul:after{
+  display : block;
+  content : "";
+  clear :both;
+}
+
+li {
+  width : 100px;
+  height : 100px;
+  border: 1px solid gray;
+  float : left;
+}
+
+.some{
+  width : 300px;
+  height : 300px;
+  border : 1px solid red;
+}

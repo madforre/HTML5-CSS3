@@ -1,0 +1,41 @@
+
+
+	* 리턴(return)이 하는 일은 크게 메소드 종료, 값의 반환 두 가지로 나뉩니다.
+	  
+	  	
+	  값의 반환시 호출한 부분으로 인자로 받은 것을 반환합니다.
+	
+	  그러나 대부분 리턴한다 → 값을 반환한다라는 의미로 많이 쓰입니다. 그 안에 종료의 의미도 포함 되어 있는 것이죠
+
+	  물론 return이 값의 반환 없이 메소드의 종료 역할을 할 때도 있습니다.
+
+	  return : 메소드 종료 의미와 값의 반환의 의미를 가진다.
+	
+			     
+	
+
+(자바스크립트 선택자)
+
+1. document.querySelector();
+
+		.querySelector()는 CSS 선택자로 요소를 선택하게 해줍니다. 
+		주의할 점은 선택자에 해당하는 첫번째 요소만 선택한다는 것 입니다.
+		아이디,클래스,태그 하나를 선택하게 해준다.
+
+2. document.getElementById();
+	
+	HTML element의 아이디를 리턴(반환)한다.
+
+3. document.getElementsByClassName();
+
+	HTML element의 클래스 이름을 리턴(반환)한다.
+
+4. document.getElementsByTagName();
+
+ 	HTML element의 태그 이름을 리턴(반환)한다.
+
+5. document.querySelectorAll();
+
+		.querySelectorAll()은 특정 CSS 선택자를 가진 모든 요소를 반환하는 속성입니다.
+		
+		ex) document.querySelectorAll('.abc') 클래스 값이 abc인 모든 요소를 리턴(반환)합니다.

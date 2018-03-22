@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+#wrap {
+  width : 100%;
+  height : auto;
+}
+
+.header {
+    width : 100%;
+    max-width:700px;
+    height : auto;
+    border : 3px solid #333;
+    margin : 0 auto;
+}
+
+.contents {
+  width : 100%;
+  max-width :700px;
+  height : auto;
+  margin : 0 auto;
+  box-sizing: border-box;
+}
+
+.footer{
+    width:100%;
+    max-width:700px;
+    height:200px;
+    background:#000;
+    margin:0 auto;
+  }
+
+/*header 시작*/
+
+
+.header .gnb {
+  width:100%;
+  max-width:700px;
+  overflow:hidden;
+  height : auto;
+  margin : 0 auto;
+  box-sizing: border-box;
+}
+
+.header .gnb ul {
+  height : auto;
+  background: #ada;
+
+}
+
+.header .gnb>ul>li{
+  height: 80px;
+  box-sizing: border-box;
+  line-height: 80px;
+  text-align: center;
+  float : left;
+
+}
+.header .gnb>ul>li a:hover{
+  -ms-transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  background: #afd;
+}
+
+.header .gnb ul>li.one {
+  width : 20%;
+  background: #afa;
+  font-size: 30px;
+}
+.header .gnb ul>li.two {
+  width : 14%;
+  background: #498;
+  font-size: 12px;
+}
+
+.header .gnb ul>li.two>a{
+  display : block;
+  width : 60%;
+  color : #ffd;
+  line-height :40px;
+  margin-left:20%;
+  margin-top:20px;
+
+}
+
+.header .gnb ul>li.three {
+  width : 12%;
+  background: #cf8;
+  font-size: 8px;
+}
+
+/*contents 시작*/
+
+.contents .section {
+    box-sizing: border-box;
+}
+.contents .section.sec1{
+    width : 100%;
+    height : 500px;
+    border : 10px solid #fdd;
+}
+.contents .section.sec2{
+    width : 100%;
+    height : 500px;
+    border : 10px solid #dfb;
+}
+.contents .section.sec3{
+    width : 100%;
+    height : 500px;
+    border : 10px solid #0fa;
+}
+/*footer 시작*/

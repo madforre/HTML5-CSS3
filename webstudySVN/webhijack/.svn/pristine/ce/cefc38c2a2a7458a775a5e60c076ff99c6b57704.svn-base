@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>nJoin</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/njoin.css">
+  <!--
+  <style>
+
+  .naverJoin 460* auto 가로가운데;
+    .header 100%*auto;
+      h1.logo(MEMBERJOIN)
+        height:170px;
+        line-height: 170px;
+        margin : 0 auto;
+
+    .content 100% * auto;
+      >ul>li*10;
+
+  </style> -->
+
+</head>
+<body>
+
+<div id="nJoin">
+    <div class="header">
+        <h1 class="logo">MEMBER JOIN</h1>
+    </div>
+
+    <form action="">
+
+      <div class="content">
+
+        <ul>
+          <div class="first">
+
+            <li> <input type="text" name="userId" placeholder="아이디"> </li>
+            <li> <input type="password" name="userPw" placeholder="비밀번호" id="pw1"></li>
+            <li> <input type="password" name="userPw" placeholder="비밀번호확인" id="pw2"></li>
+
+          </div>
+
+          <div class="second">
+
+            <li><input type="text" name="userName" placeholder="이름"></li>
+            <li class="btn">
+                <input type="button" value="남자" onclick="javascript:alert('남자');">
+                <input type="button" value="여자" onclick="javascript:alert('여자');">
+            </li>
+            <li>
+                <span class="birth">생일</span>
+                <input type="text" name="year" placeholder="년(4차)">
+                <select name="month" id="">
+
+                    <option value="title">월</option>
+                    <option value="title">1월</option>
+                    <option value="title">2월</option>
+                    <option value="title">3월</option>
+                    <option value="title">4월</option>
+                    <option value="title">5월</option>
+                    <option value="title">6월</option>
+                    <option value="title">7월</option>
+                    <option value="title">8월</option>
+                    <option value="title">9월</option>
+                    <option value="title">10월</option>
+                    <option value="title">11월</option>
+                    <option value="title">12월</option>
+                </select>
+                <input type="text" name="day" placeholder="일">
+            </li>
+            <li class="mail">
+                <input type="text" name="userEmail" placeholder="본인확인 이메일(선택)">
+
+
+            </li>
+
+          </div>
+
+          <div class="third">
+
+              <span class="btn2">+82</span>
+              <input type="text" name="userPhone" placeholder="휴대전화번호">
+              <input type="button" onclick="javascript:alert('휴대폰인증');" value="인증">
+
+            <li>
+              <input type="text" name="userConfirm" placeholder="인증확인">
+              <input type="button" onclick="javascript:alert('확인');" value="확인"></li>
+
+          </div>
+
+          <div class="submit">
+            <li>
+              <input type="submit" value="가입하기">
+            </li>
+
+
+          </div>
+       </ul>
+
+      </div>
+
+    </form>
+
+    <div class="footer">
+      <address>서울시 강남구 역삼동</address>
+
+
+
+  </div>
+</div>
+
+
+
+</body>
+</html>

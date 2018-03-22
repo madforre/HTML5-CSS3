@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn1">BUTTON_ID</button>
+  <button class="btn2">BUTTON_CLASS</button>
+  <button class="btn2">BUTTON_CLASS</button>
+  <button>BUTTON_TAG</button>
+
+  <script>
+
+    var num=0;
+
+
+
+    var btn1=document.getElementById('btn1');
+    btn1.addEventListener('click',openEx);
+
+    function openEx(){
+      setTimeout(function(){
+        window.open('http://daum.net','','width=600,height=800,left=200,top=100')
+      },2000);
+    }
+
+    var btn2=document.getElementsByClassName('btn2');
+
+    var setOut;
+
+    btn2[0].addEventListener('click',function(){
+
+      setOut=setTimeout(conEx,3000);
+
+      console.log(setOut);
+
+    });
+
+    function conEx(){
+      console.log("setTimeout() 실행횟수 >> "+(++num));
+    }
+
+    btn2[1].addEventListener('click',function(){
+
+      clearTimeout(setOut); //setTimeout
+      console.log("setTimeout(conEx,3000) 중지")
+
+
+    });
+
+    console.log(setOut);
+
+  </script>
+
+
+
+</body>
+</html>

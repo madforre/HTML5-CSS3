@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index</title>
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<style>
+
+/*header 시작*/
+
+header .gnb{
+  width :auto;
+  position : absolute;
+  height : auto;
+  background: #ccc;
+  left : 0;
+  top : 0;
+  text-align: center;
+}
+
+header .gnb>ul{
+
+  }
+
+header .gnb>ul>li{
+ width : 100px;
+ float : left;
+ line-height: 50px;
+ box-sizing: border-box;
+}
+
+header .gnb>ul>li.home{
+ background: #fff;
+}
+
+header .gnb>ul>li.list{
+ color : #fff;
+ background: #f44336;
+}
+
+header .gnb>ul>li.menu{
+ background: #f44336;
+ display : none;
+}
+
+
+/*reactive*/
+
+@media only screen and (max-width:600px){
+  header .gnb{
+    width : 100%;
+    height : auto;
+  }
+  header .gnb>ul>li{
+
+  }
+  header .gnb>ul>li.home{
+
+  }
+
+  header .gnb>ul>li.list{
+
+  display: none;
+  }
+  header .gnb>ul>li.menu{
+    background : #cac;
+    display :block;
+    float: right;
+
+
+  }
+  header .gnb>ul>li.menu:hover ~ li.list{
+      display:block;
+      /*width : 60%;*/
+      width : 100%;
+  }
+
+  .test {
+    width : 100%;
+    height : 500px;
+    background: #000;
+    color : white;
+    margin-top: 50px;
+  }
+</style>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="gnb">
+        <ul>
+          <li class="home">Home</li>
+          <li class="menu">menu</li>
+          <li class="list">Link 1</li>
+          <li class="list">Link 2</li>
+          <li class="list">Link 3</li>
+          <li class="list">Link 4</li>
+        </ul>
+      </div>
+      <div class="test">ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</div>
+    </header>

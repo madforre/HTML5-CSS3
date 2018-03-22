@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+img{
+  max-width : 100%;
+  height : auto;
+  display : block;
+  /* margin-bottom : 12px; */
+}
+
+.box {
+  width : 1000px;
+  height : auto;
+  margin : 0 auto;
+  background: #ccc;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+ul li{
+  width : 25%;
+  box-sizing: border-box;
+  text-align: center;
+  float : left;
+  transition : all 0.5s;
+}
+
+
+
+@media only screen and (max-width:1000px){
+  .box{
+    width : 98%;
+    background:#cdf;
+  }
+  .box ul li{
+    width:50%;
+    height : auto;
+  }
+  .box ul li img{
+    width : 100%;
+  }
+}
+
+@media only screen and (max-width:763px){
+  .box{
+    width : 98%;
+    background:#cdf;
+  }
+  .box ul li{
+    width:100%;
+
+  }
+  /*.box ul li img{
+    width : 100%;
+  }*/
+}
+
+
+
+
+
+/* <---------------예제------------> /*
+
+
+
+
+/*body{
+  background :#ccc;
+}*/
+
+
+
+
+
+
+
+/*민 중심*/
+/*
+@media only screen and (min-width : 320px) and (max-width : 500px)
+{body{background : #f00;}
+}
+
+@media only screen and (min-width : 764px){
+  body{background : #ff0;}
+}
+
+@media only screen and (min-width : 1024px){
+  body{background : #1f93dc;}
+}*/
+
+/*맥스중심*/
+
+/*
+@media only screen and (max-width:1023px){
+  body{background:#ff0;}
+}
+
+@media only screen and (max-width:763px){
+  body{background:#f00;}
+}*/

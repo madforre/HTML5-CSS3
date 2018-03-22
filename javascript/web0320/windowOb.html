@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+    <script>
+      // window 객체
+
+      window.innerHeight; // 브라우저 높이(테두리제외)
+      window.innerWidth; // 브라우저 너비
+      window.pageXOffset; //스크롤 가로
+      window.pageYOffset; // 스크롤 세로
+      window.screen; // Screen이란 무얼 의미하냐면, 지금 자신이 보고 있는 PC, 노트북, 스마트폰,
+                    // 테블릿 등등의 화면 크기를 말한다.
+                    // 브라우저 화면
+      window.document; // 브라우저 문서 ( 브라우저 문서 접근할 때 쓰이는 객체)
+      window.location; // 브라우저 URL
+      window.history; // 브라우저 상세정보
+
+      // window.history.back() ; 이전페이지
+      // window.history.go(-1);  - 숫자 만큼 뒤로
+      // window.history.forward(); 앞페이지
+
+
+      window.history.length;// 브라우저에 저장된 페이지 수
+      window.screen.width; // screen width;
+      window.screen.height; // screen height;
+
+      window.navigator //브라우저 전체의 정보
+
+      //window 객체 메서드
+
+      // window.alert("팝업창"); //
+      // window.open("페이지","방법","설정");
+
+    </script>
+    <br>
+
+    window.open("http://daum.net","","width=300,height=300,left=200,top=200");<br>
+    윈도우.오픈 : 새 창 띄우기
+    <br>
+
+    <br>
+
+
+
+    window는 전역 객체라고 부른다.<br>
+    window 객체 내 포함된 객체들<br><br>
+
+    BOM (브라우저 객체 모델)<br><br>
+
+      ㅇ 웹 브라우저 기능 요소를 직접 관리/제어할 수 있는 특별한 객체 모음<br>
+         - 브라우저 제작사 마다 세부사항이 다소 다르게 구현<br>
+            . 따라서, 한정적 사용이 바람직.<br><br>
+
+      얘네를 브라우저 오브젝트라고 한다.screen document history navigator location
+</body>
+</html>

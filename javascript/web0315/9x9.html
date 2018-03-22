@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>구구단</title>
+</head>
+<body>
+
+  <button id="btn1">BUTTON</button>
+  <button class="btn2">BUTTON</button>
+  <div class="box"></div>
+
+  <script>
+
+  document.querySelector('#btn1').style.background="#f00"; //id
+  document.querySelectorAll('.btn2')[0].style.background="#ff0";
+  // 객체(태그)가 여러개
+
+  var btn1Id=document.getElementById('btn1');
+  var btn2Class=document.getElementsByClassName('btn2')[0];
+
+  btn1Id.addEventListener('click',btn1fun);//마우스 눌렀다 뗐을 때
+  btn2Class.addEventListener('mousedown',btn2fun);//마우스를 눌렀을 때
+
+  var box=document.getElementsByClassName('box')[0];
+  box.style.border="1px solid";
+  box.style.width="400px";
+
+  function btn1fun(){
+
+    box.innerHTML = null;
+
+    for(var i=2;i<10;i++){
+
+      box.innerHTML+=i+"단 입니다.<br>";
+      for(var j=1;j<10;j++){
+        box.innerHTML+=(i+"x"+j+"="+(i*j))+"<br>";
+
+        }
+      }
+  };
+
+  function btn2fun(){
+
+    box.innerHTML = null;
+
+    for(var i=9;i>1;i--){
+
+      box.innerHTML+=i+"단 입니다.<br>";
+      for(var j=1;j<10;j++){
+          box.innerHTML+=(i+"x"+j+"="+(i*j))+"<br>";
+
+        }
+      }
+  };
+
+
+
+
+
+
+  // box.innerHTML="bye"
+  // box.innerHTML="hi"
+
+
+
+
+
+
+  //
+  // for(var i=2;i<10;i++){
+  //
+  //     document.write(i+"단시작<br>")
+  //
+  //
+  //     for(var j=1;j<10;j++){
+  //
+  //       document.write(i+"x"+j+"="+i*j+"<br>");
+  //
+  //     }
+  // }
+  //
+
+
+
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+@charset "UTF-8";
+
+#wrap{
+  width :100%;
+  height : auto;
+
+}
+
+header{
+  width : 100%;
+  height : auto;
+  background: #f44336;
+  position : fixed;
+  left : 0;
+  top : 0;
+  text-align: center;
+  border-bottom: 2px solid;
+
+}
+
+nav{
+  width : 100%;
+  height : 500px;
+  background: #f44336;
+  /*max-width: 764px*/
+}
+
+section{
+  width : 100%;
+  height : auto;
+  background: #ccc;
+}
+
+footer{
+  width : 100%;
+  height : auto;
+  text-align: center;
+}
+
+
+
+ /*header 시작*/
+
+header .gnb{
+   width :auto;
+   position : absolute;
+   height : auto;
+   background: #ccc;
+   left : 0;
+   top : 0;
+ }
+
+header .gnb>ul{
+  overflow: hidden;
+}
+
+header .gnb>ul>li{
+  width : 100px;
+  float : left;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+
+header .gnb>ul>li.home{
+  background: #fff;
+}
+
+header .gnb>ul>li.list{
+  color : #fff;
+  background: #f44336;
+}
+
+header .gnb>ul>li.menu{
+  background: #f44336;
+  display : none;
+}
+
+  /*nav 시작*/
+
+nav .navTitle{
+  text-align: center;
+  background: #f44336;
+  border : 3px solid yellow;
+
+
+
+}
+
+nav .navTitle h1.title{
+  color : #fff;
+  line-height: 200px;
+  font-size: 100px;
+  margin-top: 50px;
+
+}
+nav .navTitle h3.mTitle{
+  color : #fff;
+  line-height: 100px;
+  /*text-align: center;*/
+}
+
+nav .navTitle span{
+  /*display: block;*/
+  /*text-align: center;*/
+  font-size: 5px;
+}
+
+
+nav .navTitle span.start{
+  width : 100px;
+  height : 50px;
+  line-height: 50px;
+  background: #000;
+  margin:50px auto 100px;
+  color : #fff;
+}
+
+nav .navTitle span.start:hover{
+  background: #fff;
+  cursor: pointer;
+  color : #000;
+}
+
+
+  /*section 시작*/
+
+section .content{
+  width : 100%;
+  max-width: 1000px;
+  height : auto;
+  margin : 0 auto;
+  overflow: hidden;
+}
+
+section .content ul li {
+  float : left;
+}
+
+
+section .content.sec1{
+  background: #fff;
+  height : auto;
+}
+section .content.sec2{
+  background: #fd0;
+  height : auto;
+}
+
+
+
+section .content.sec1 ul li {
+
+}
+
+section .content.sec1 ul li.txt{
+  width : 70%;
+}
+
+section .content.sec1 ul li.logo{
+  width : 30%;
+}
+
+section .content.sec2 ul li{
+
+
+}
+
+section .content.sec2 ul li.txt{
+
+  width : 70%;
+}
+
+section .content.sec2 ul li.logo{
+
+  width : 30%;
+}
+
+
+
+section .content >ul>li.txt h1.leftTxt{
+  line-height: 120px;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+section .content >ul>li.txt p.Txt{
+  height:50px;
+  font-size:18px;
+}
+
+section .content >ul>li.txt p.bTxt{
+  margin-top: 100px;
+  height: 90px;
+  font-size:14px;
+  margin-bottom : 100px;
+}
+
+
+
+  /*footer 시작*/
+
+footer .fTop{
+   line-height: 200px;
+   background: #555;
+   color : #fff;
+   font-size: 12px;
+ }
+
+
+footer .fBottomaddress{
+  width : 100%;
+  max-width: 500px;
+  line-height: 500px;
+  margin : 0 auto;
+  color : #fff;
+}
+
+img{
+  max-width : 100%;
+  height : auto;
+  display: block;
+}
+
+/*reactive*/
+
+
+@media only screen and (max-width:600px){
+  header .gnb{
+    width : 100%;
+    height : auto;
+
+  }
+
+
+  header .gnb>ul>li{
+  }
+
+
+  header .gnb>ul>li.list{
+    display:none;
+  }
+
+
+  header .gnb>ul>li.menu{
+    background : #cdc;
+    display :block;
+    float : right;
+
+  }
+
+
+  header .gnb>ul>li.menu:hover{
+
+    }
+
+  header .gnb>ul>li.menu:hover ~ li.list{
+      display:block;
+      width : 100%;
+  }
+
+
+  section .content ul li{
+    width : 100%;
+    float : none;
+  }
+
+
+  section .content.sec1 ul li.txt{
+    width : 100%;
+
+  }
+
+  section .content.sec1 ul li.logo{
+    width : 100%;
+
+
+  }
+
+  section .content.sec2 ul li.txt{
+    width : 100%;
+  }
+
+  section .content.sec2 ul li.logo{
+    width : 100%;
+  }
+
+  img{
+    width : 100%;
+  }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+  <script>
+    var i=2;
+
+    do{
+
+        console.log(i+"단입니다");//최소 한번은 실행
+        // 그냥 while에 비해 내용을 먼저 실행한 후에 조건을 비교합니다.
+        // while은 조건을 먼저 비교한 후에 내용을 실행하고요.
+        // 그러니까 do ~ while은 내용이 최소 1번은 실행된다는 거죠.
+         var j=1;
+        do{
+            console.log(i+"*"+j+"="+(i*j));
+            j++;
+        }while(j<10)
+
+        i++;
+      }while(i<10);
+
+
+  </script>
+
+</body>
+</html>

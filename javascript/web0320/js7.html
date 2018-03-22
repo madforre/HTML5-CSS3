@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+  <div id="hotel1"></div>
+  <div id="hotel2"></div>
+
+  <script>
+    function Hotel(name,rooms,booked){
+        this.name=name;
+        this.rooms=rooms;
+        this.booked=booked;
+
+        this.checkAvilability=function(){
+          return this.rooms-this.booked;
+        }
+    }
+
+  var quayHotel=new Hotel("Quay", 40, 25);
+  var parkHotel=new Hotel("Park", 100, 75);
+
+  var details1 = quayHotel.name+" 호텔의 남은 방 : ";
+      details1+=quayHotel.checkAvilability();
+      details1+=" 개의 방이 남았습니다.";
+  var elHotel1=document.getElementById("hotel1");
+  elHotel1.textContent=details1;
+
+  var details2 = parkHotel.name+" 호텔의 남은 방 : ";
+      details2+=parkHotel.checkAvilability();
+      details2+=" 개의 방이 남았습니다.";
+  var elHotel2=document.getElementById("hotel2");
+  elHotel2.textContent=details2;
+
+  </script>
+
+
+
+</body>
+</html>

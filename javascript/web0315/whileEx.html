@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+  <script>
+
+    var i=2;
+
+    while(true){
+      console.log(i+"단입니다.");
+      document.write(i+"단입니다.<br>");
+      var j=1;
+        while(true){
+
+          console.log(i+"*"+j+"="+i*j);
+          document.write(i+"*"+j+"="+i*j+"<br>");
+
+          j++;
+
+          if(j==10){
+            document.write("<br>다음 단으로 넘어갑니다.<br><br>")
+            break;
+          };
+
+        }
+      i++;
+
+      if(i==300){
+        break;
+      };
+    }
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/web02.css">
+</head>
+<body>
+   <div id="wrap">
+       <div id="header">
+           header    
+       </div>
+       <div id="nav">
+           nav           
+       </div>
+       <div id="section">
+           section
+       </div>
+       <div id="aside">
+           aside
+       </div>
+       <div>
+           section
+       </div>
+       <div id="article">
+           article
+       </div>
+       <div id="footer">
+           footer
+       </div>    
+  </div>
+    
+</body>
+</html>

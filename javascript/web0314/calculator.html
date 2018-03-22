@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/cacul.css">
+  <link rel="stylesheet" href="css/reset.css">
+
+</head>
+
+<body>
+<div id="box">
+  <div class="contents left">
+
+    <div class="text">
+      <label for="input"></label><input type="text" id="input" value="">
+    </div>
+    <div class="pad">
+      <ul>
+        <li><button type="button" id="7">7</button></li>
+        <li><button type="button" id="8">8</button></li>
+        <li><button type="button" id="9">9</button></li>
+        <li><button type="button" id="4">4</button></li>
+        <li><button type="button" id="5">5</button></li>
+        <li><button type="button" id="6">6</button></li>
+        <li><button type="button" id="1">1</button></li>
+        <li><button type="button" id="2">2</button></li>
+        <li><button type="button" id="3">3</button></li>
+        <li><button type="button" id="0">0</button></li>
+        <li><button type="button" id="dot">.</button></li>
+        <li><button type="button" id="equal">=</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="contents right">
+
+    <div class="ca">
+      <ul>
+        <li><button class="ca_plus">+</button></li>
+        <li><button class="ca_minus">-</button></li>
+        <li><button class="ca_multi">*</button></li>
+        <li><button class="ca_divi">/</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+
+for(i=0;i<10;i++){
+var btn_name = "btn_"+i;
+console.log(btn_name)
+// document.getElementById(i);
+}
+
+ var button_id=document.getElementById("1");
+ button_id.addEventListener('click',func1);
+
+ function func1(){
+ document.getElementById('input').value="1";
+ }
+ //
+ var button_id=document.getElementById("2");
+ button_id.addEventListener('click',func1);
+
+ function func1(){
+ document.getElementById('input').value="2";
+}
+ // }
+
+
+
+
+
+
+
+
+ // for(i=0;i<10;i++){
+ //
+ //
+ // ;}
+
+
+
+
+
+  //
+  // switch(padClass){
+ // 			case padClass = pad0 : //key 값이 0이면
+ // 					var put = getElementsByName('num');
+  //         put[0].document.write//처리,구현
+ // 			break;
+  //
+ // 			case 1 : //key 값이 1이면
+ // 					실행문;;//처리,구현
+ // 			break;
+  //
+ // 			case 2 : //key 값이 2이면
+ // 					실행문;;//처리,구현
+ // 			break;
+  //
+ // 			case 3 : //key 값이 3이면
+ // 					실행문;;//처리,구현
+ // 			break;
+  //
+ // 			default: ;
+  //
+  //  }
+
+
+
+
+
+</script>
+</body>
+</html>

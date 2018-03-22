@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <div class="gallery">
+    AUTO_GALLERY
+      <span class="arrow arrow_left"></span>
+      <span class="arrow arrow_right"></span>
+      <span class="arrow mouse"></span>
+
+  </div>
+
+  <script>
+    var gallery = document.getElementsByClassName('gallery');
+
+    var idx=0;
+
+    function autoGallery(){
+
+      console.log(idx);
+
+      gallery[0].style.background="url(img/bg"+idx+".jpg) no-repeat 50%";
+      gallery[0].style.backgroundSize="cover";
+
+      if(idx==4){idx=-1};
+
+      idx++;
+
+    }
+
+    var setInt = setInterval(autoGallery,1000);
+
+    var left = document.querySelectorAll('span')[0];
+    var right = document.querySelectorAll('span')[1];
+
+    left.addEventListener('click',leftManual);
+    function leftManual(){
+      console.log("arrow left");
+      if(idx==4){
+        idx=0;
+      }else{
+        idx++;
+      }
+      console.log(idx);
+      gallery[0].style.background="url(img/bg"+idx+".jpg) no-repeat 50%";
+      gallery[0].style.backgroundSize="cover";
+    }
+
+    right.addEventListener('click',rightManual);
+    function rightManual(){
+      console.log("arrow right");
+      if(idx==0){
+        idx=4;
+      }else{
+        idx--;
+      }
+      console.log(idx);
+      gallery[0].style.background="url(img/bg"+idx+".jpg) no-repeat 50%";
+      gallery[0].style.backgroundSize="cover";
+    }
+
+
+    left.addEventListener('mouseover', function(){
+        clearInterval(setInt);
+    });
+
+
+
+    left.addEventListener('mouseout', function(){
+        setInt = setInterval(autoGallery,1000); //setInterval 재시작
+    });
+
+    right.addEventListener('mouseover', function(){
+
+      arrow()
+
+
+
+    });
+
+    right.addEventListener('mouseout', function(){
+
+      arrow2()  //setInterval 재시작
+    });
+
+    // function arrow(){
+    //   clearInterval(setInt);
+    // }
+
+    function arrow(){
+      clearInterval(setInt);
+    }
+
+    function arrow2(){
+      setInt = setInterval(autoGallery,1000);
+    }
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+1. WEB
+
+	웹(Web)이란 월드 와이드 웹(World Wide Web)의 줄임말로,
+	첫 글자를 따서 WWW라고 부르기도 합니다.
+	웹을 영어 뜻 그대로 풀이하면 '거미줄' 이라는 뜻이며,
+	이는 '세상의 크기만한 거미줄'이라고 직역할 수 있습니다.
+
+2. HTML
+
+	Hyper Text Mark-up Language	웹 페이지를 위한 지배적인 마크업 언어이다
+
+3. CSS
+
+	CSS Cascading Style Sheets  디자인을 담당한다.
+
+4. Block 태그의 특징
+
+	크기와 폭을 지정할 수 있다.
+	자동으로 줄바꿈(개행)
+	width값을 설정하지 않으면 부모태그의 100%
+
+5. margin, padding
+
+	 margin "나하고 내 부모 또는 다른 태그와의 여백"
+	 padding "나하고 내 자식 태그, 컨텐츠와의 여백"

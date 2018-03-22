@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+  <button>나이를 먹는 버튼</button>
+  <div class="box"></div>
+  <script>
+
+    // document.querySelectorAll('button') ;
+    // document.querySelectorAll('.box') ;
+    var btn=document.getElementsByTagName('button');
+    var box=document.getElementsByClassName('box');
+    var first = 11;
+
+    btn[0];
+    box[0];
+
+    btn[0].addEventListener('click',function(){
+
+
+        varSub("이름 ", first);
+
+    });
+
+    var version = 0; // 전역변수("프로그램이 종료할 때 종료");
+
+    function varSub(name, age){ //매개변수 >> 지역변수
+
+      var person = "이름 : "+name+", 나이 : "+age+"살입니다. ";
+      var num=0; // 지역변수("함수가 종료되면 사라진다.")
+      console.log(person);
+      box[0].textContent=person;
+      console.log("전역변수 >> "+(version++));
+      console.log("지역변수 >> "+(num++));
+        first++;
+        
+    }
+
+
+
+  </script>
+
+</body>
+</html>

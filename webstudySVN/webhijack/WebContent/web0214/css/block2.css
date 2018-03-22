@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+div.hi {
+    width : 200px; height : 200px; border: 1px solid gray; margin: 0 auto;
+    font-size: 30px; 
+
+    
+}
+
+div.box1{background: #000; color:white; text-align: left; line-height: 100px;}
+div.box2{background: #ff0000; text-align: center; line-height: 300px;}
+div.box3{background: #00ff00; text-align: right; line-height: 400px;}
+div.box4{background: #0000ff;}
+
+p.p1{
+    background: powderblue;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    line-height: 50px;
+    padding: 120px;
+/*    overflow:scroll;*/
+}

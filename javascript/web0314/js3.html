@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // var num1 = 100;
+    // var num2 = 200;
+    var num1=parseInt(prompt("숫자1을 입력"));
+    var num2=parseInt(prompt("숫자2를 입력"));
+    var result=prompt("연산자를 입력하세요(+-*/% 만 입력)")
+
+    if(result=="+"){
+
+      document.write(num1+"+"+num2+"="+(num1+num2)+"<br>");
+          // "+"
+    }else if(result=="-"){
+
+      document.write(num1+"-"+num2+"="+(num1-num2)+"<br>");
+          // "-"
+
+    }else if(result=="*"){
+
+      document.write(num1*num2+"<br>");
+          // "*"
+    }else if(result=="/"){
+
+      document.write(num1/num2+"<br>");
+          // "/"
+    }else if(result=="%"){
+
+      document.write(num1%num2+"<br>");
+          // "%"
+    }else{
+          alert("입력 연산자가 잘못 입력되었습니다.");
+
+    }
+
+    document.write("5초뒤 입력창으로 이동합니다.");
+    setTimeout(function(){history.go(0)},5000);
+    // location.href="/javascript/web0314/js3.html"
+
+
+
+    //
+    //
+    // document.write(num1+"-"+num2+"="+(num1-num2)+"<br>");
+    //
+    //
+    // document.write(num1%num2+"<br>");
+
+
+
+  </script>
+
+</body>
+</html>

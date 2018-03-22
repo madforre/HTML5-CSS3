@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+    <div class="naverJoin">
+        <div class="header">
+            <h1 class="logo">MEMBERJOIN</h1>
+        </div>
+        <form action="naverJoinOk.php" method="POST">
+        <div class="content">
+            <ul>
+                <li class="son1">
+                    <input type="text" name="userId" placeholder="아이디">
+                </li>
+                <li class="son1">
+                    <input type="password" name="userPw" placeholder="비빌번호" id="pw1">
+                </li>
+                <li class="son1 m1">
+                    <input type="password" name="userPw" placeholder="비빌번호재확인" id="pw2">
+                </li>
+                <li class="son2">
+                    <input type="text" name="userName" >
+                </li>
+                <li class="son2 btn">
+                    <input type="button" value="남자" onclick="javascript:alert('남자');">
+                    <input type="button" value="여자" onclick="javascript:alert('여자');">
+                </li>
+                <li class="son2">
+                    <span class="t1">생일</span>
+                    <input type="text" name="year" placeholder="년(4자)">
+                    <select name="month" >
+                        <option value="title" selected>월</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <input type="text" name="day" placeholder="일">
+                    
+                </li>
+                <li class="son2 m1">
+                    <input type="text" name="userEmail" placeholder="본인확인 이메일(선택)" >                    
+                </li>
+                <li class="son3">
+                    <span class="btn2">+82</span>
+                    <input type="text" name="userPhone" placeholder="휴대전화번호">
+                    <input type="button" onclick="javascript:alert('휴대폰인증');" value="인증">
+                </li>
+                <li class="son3 m1">
+                    <input type="text" name="userPhoneChecked" placeholder="인증번호">
+                    <input type="button" onclick="javascript:alert('확인');" value="확인">
+                </li>
+                <li class="son4">
+                    <input type="submit" value="가입하기">
+                </li>
+            </ul>
+        </div>
+        </form>
+        <div class="footer">
+            <address>서울시 강남구 역삼동...</address>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

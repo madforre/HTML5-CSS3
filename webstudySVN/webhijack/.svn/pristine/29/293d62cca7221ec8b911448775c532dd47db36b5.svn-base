@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML실습 iriver</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="header">
+        <div class="hMenu">
+            <div class="topMenu"></div>
+            <div class="bottomMenu"></div>
+        </div>
+    </div>
+    <div class="nav"></div>
+    <div class="section">
+        <div class="sec1Top"></div>
+        <div class="sec1Bottom"></div>
+    </div>
+    <div class="footer">
+        <div class="fContent"></div>
+    </div>
+</div>
+    
+</body>
+</html>

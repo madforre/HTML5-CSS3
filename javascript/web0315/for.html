@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+<button id="btn">BUTTON</button>
+<div class="box"></div>
+  <script>
+  var btn=document.getElementById("btn");
+
+  btn.addEventListener('click', btnFun);
+
+  function btnFun(){
+
+
+  //for문
+
+      //문자+숫자
+
+      var list=document.getElementsByClassName('list');
+      var box=document.getElementsByClassName('box')[0];
+
+
+
+
+        for(var i=0;i<10;i++)
+
+        {
+        document.write("<div class='list'>LIST</div>");
+        list[i].style.width="300px";
+        list[i].style.height="100px";
+        list[i].style.border="1px solid";
+        list[i].style.float="left";
+        list[i].style.textAlign="center";
+        list[i].style.color="#fff";
+        list[i].style.fontSize="40px";
+        list[i].style.lineHeight="100px";
+        list[i].style.boxSizing="border-box";
+        list[i].style.background="url(/images/bg"+i+".jpg) no-repeat 50%";
+        list[i].style.backgroundSize="cover";
+        }
+        setTimeout(function(){ history.go(0)  }, 3000)
+      }
+
+
+  </script>
+
+</body>
+</html>

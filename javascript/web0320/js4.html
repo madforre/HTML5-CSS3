@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>객체 만드는 두번째 방법</title>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <script>
+  //객체 먼드는 두번째 방법
+
+    // 객체 참조 변수("객체의 주소 값을 담는 변수")
+    // 아래에서는 var car가 객체참조변수이다.
+
+    var car = new Object(); //new (객체의 주소(새로 생긴))
+
+    //오브젝트라는 껍데기에 담음.
+    //이러한 과정을 인스턴스화라고 한다.
+    //새로운 객체를 만드는 과정 : 인스턴스 즉 객체화이다.
+
+    car.name="hi";
+    car.number="1581";
+    car.wheel="고오급";
+    car.color='white';
+    car.carMethod=function(){
+      console.log(car);
+    }
+
+
+    document.write(car.name+"<br>");
+    document.write(car.number+"<br>");
+    document.write(car.wheel+"<br>");
+    document.write(car.color+"<br>");
+    car.carMethod();
+
+    var box = document.getElementsByClassName('box');
+    box[0].textContent= car.name;
+    box[1].textContent= car.number;
+    box[2].textContent= car.wheel;
+
+  </script>
+
+</body>
+</html>

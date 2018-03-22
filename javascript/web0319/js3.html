@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <button id="btn1">BUTTON_ID</button>
+    <button class="btn2">BUTTON_Class_1</button>
+    <button class="btn2">BUTTON_Class_2</button>
+    <button>BUTTON4</button>
+
+    <script>
+
+    //document.querySelector("#btn1"); // 하나만선택
+    var btn_id = document.getElementById('btn1');
+    console.log(btn_id);
+
+    //document.querySelectorAll('.btn2'); // 클래스 선택
+    var btn_class = document.getElementsByClassName('btn2');
+    console.log(btn_class);
+
+    var btn_tag = document.getElementsByTagName('button');
+    console.log(btn_tag);
+
+
+    for(i=0;i<btn_class.length;i++){
+
+      btn_class[i];
+
+      console.log(btn_class[i]);
+
+      // btn_class[i].addEventListener('click',func2,false)  //전부 호출
+
+      }
+
+    btn_class[0].onclick=func2; //개별 호출
+    btn_class[0].onmousedown=function(){ //익명함수..
+                func2()};
+
+    btn_class[1].addEventListener("click",function(){ // 개별 호출
+        func3("이름 : ..."); //익명 함수 이용해서 다른 함수 호출
+    });
+
+    btn_tag[3].onclick=function(){
+      console.log("두수의 합은 : "+func4(100,100));
+    };
+
+    for(i=0;i<btn_tag.length;i++){
+
+      btn_tag[i];
+
+      console.log(btn_tag[i]);
+
+    }
+
+    btn_id.addEventListener('click',func1,false);
+    // 이벤트 캡쳐링,버블링 >> 제이쿼리가서 다시 하자. 기본이 false
+
+    // btn_id.addEventListener('mousedown',function(){
+    //   func2();
+    // }); // 마우스다운이 클릭을 덮네?
+    // 익명함수
+
+        var num=0;
+
+
+          function func1(){
+            console.log("func1 함수 호출 >>"+num++);
+            console.log(num);
+          }
+          function func2(){
+            console.log("func2 함수 호출 >>"+num++);
+            console.log(num);
+            return 100;
+
+          }
+          function func3(name){
+            console.log("func3 함수 호출 : "+name);
+          }
+          function func4(num1,num2){
+            console.log("func4 함수 호출 ");
+            var sum=num1+num2;
+            return sum;
+
+          }
+
+    </script>
+
+</body>
+</html>

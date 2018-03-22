@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+img{
+
+}
+
+a{
+  
+  width  :300px;
+  height : 300px;
+}
+
+.box{
+  width :300px;
+  height : auto;
+  border: 1px solid;
+  display : inline-block;
+}
+
+.box.box1{
+  background : #f00;
+}
+
+.box.box2{
+  background: #ecef2d;
+}
+
+.box.box3{
+  background: #2dffb9;
+}

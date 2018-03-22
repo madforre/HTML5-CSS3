@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>선택자</title>
+</head>
+<body>
+  <button id="btnId">BUTTON_ID</button>
+    <button class="btnClass">BUTTON_CLASS</button>
+    <button class="btnClass">BUTTON_CLASS</button>
+    <button class="btnClass">BUTTON_CLASS</button>
+    <button>BUTTON_TAG</button>
+  <div id="wrap">
+    <div class="nav">
+
+
+    </div>
+  </div>
+
+    <form action="joinOk.php" method="post" name="joinForm">
+      <label for="userId">ID: </label>
+      <input type="text" name="userId" id="userId" value="d"><br>
+      <label for="userPw">PW: </label>
+      <input type="password" name="userPw" id="userPw"><br>
+      <input type="button" id="submit" value="회원가입"> <!-- 유효성 검사 --->
+      <!-- <input type="submit" value="회원가입"> -->
+
+    </form>
+
+  <script>
+
+    var btnId= document.querySelector('#btnId');
+        btnId.style.background="#f00";
+
+    var divTag=document.querySelector('div');
+        divTag.style.border="1px solid #00f";
+
+
+
+    var btnClass=document.querySelectorAll('.btnClass')[0];
+        btnClass.style.background="#ff0";
+
+
+    for(var i=1;i<3;i++){
+      var btnClass=document.querySelectorAll('.btnClass')[i];
+        btnClass.style.background="#fd0";
+    }
+
+
+    var btnClass=document.querySelectorAll('.btnClass')
+    console.log("전체 btnClass의 총 갯수: "+btnClass.length)
+
+    var btnTag2=document.getElementsByTagName('button');
+        btnTag2[4].style.background="#d9d";
+
+    var frm=document.getElementsByName('joinForm');
+    frm[0].style.background="#ff0";
+    frm[0].style.width="400px";
+    frm[0].style.height="200px";
+
+    console.log(frm[0].getAttribute('mehod'));
+    console.log(frm[0].getAttribute('action'));
+
+    console.log(frm[0].userId);
+    console.log(frm[0].userId.value); // input value get
+    console.log(frm[0].userPw);
+    console.log(frm[0].userPw.value); // input value get
+
+
+
+
+
+
+  </script>
+
+
+</body>
+</html>

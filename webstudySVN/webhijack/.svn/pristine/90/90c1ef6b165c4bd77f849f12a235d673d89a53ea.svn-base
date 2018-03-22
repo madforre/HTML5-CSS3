@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+    .join{ width : 100% /*width 가 100%이면 부모가 누구인가? 바로 reset.css의 body이다.*/;
+          
+           max-width: 1000px ; height: auto; margin: 0 auto; border: 5px solid ;
+            box-sizing : border-box; background:powderblue;
+        
+}
+    
+    table { width: 100%; border-collapse:collapse; margin: 0 auto;}
+    
+    table, th, td{
+        border : 1px solid #000; text-align : center;
+      
+    }
+    
+    
+  

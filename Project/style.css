@@ -1,0 +1,44 @@
+body{
+     display: flex;
+    align-items:;
+    justify-content: center;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    width:1000px;
+}
+
+
+header{
+    border: 10px solid powderblue;
+
+    margin : 20px;
+    text-align: center
+
+}
+
+
+.content{
+    display:flex;
+    }
+
+
+main{
+    margin : 20px;
+}
+
+aside{
+    border: 10px solid tomato;
+    flex-basis:150px;
+    flex-shrink: 0;
+    margin:20px;
+}
+
+footer{
+    text-align: center;
+    border : 10px solid green;
+    padding : 20px;
+    margin : 20px;
+}

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body>.images {
+  width: 1000px;
+  height: 600px;
+  position : absolute;
+  top : 300px;
+  left : 500px;
+  background: gray;
+}
+
+body>.images>.img1 {
+  width: 200px;
+  height: 200px;
+  border : 3px solid black;
+  box-sizing: border-box;
+  background: blue;
+  position : absolute;
+  top: 200px;
+  left: 400px;
+  z-index: 3;
+}
+
+body>.images>.img2 {
+  width: 200px;
+  height: 200px;
+  border : 3px solid black;
+  box-sizing: border-box;
+  background: green;
+    position : absolute;
+  top: 200px;
+  left: 400px;
+  z-index: 2;
+
+}
+
+body>.images>.img3 {
+  width: 200px;
+  height: 200px;
+  border : 3px solid black;
+  box-sizing: border-box;
+  position : absolute;
+  background: yellow;
+  top: 200px;
+  left: 400px;
+  z-index: 1;
+}
+
+/*hover*/
+
+body>.images>.img1:hover {
+  position :absolute;
+  left : 200px;
+  transition: all 2s;
+}
+body>.images>.img2:hover {
+  position :absolute;
+  left : 200px;
+
+  transition: all 2s;
+
+
+}

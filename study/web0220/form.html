@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+       <form action="joinOk.php" method="POST">
+
+            <label for="userId" >ID : </label><input type="text" name="userId" id="userId" placeholder="아이디">
+            <input type="button" onclick="javascript:alert('아이디찾기');"value="아이디찾기"><br>
+            <label for="userPW">Password : </label><input = type="password" name="userPw" id="" placeholder="패스워드"><br>
+            <label for="userName"> Name : </label><input type="text" name="userName" id="" placeholder="이름입력"><br>
+            <label for="userPhone"> Phone : </label><input type="text" name="userPhone" id=""><br>
+            <label for="userGender">성별</label>
+            <input type="radio" name="userGender" id="" value="men">남자
+            <input type="radio" name="userGender" id="" value="women">여자
+            <br>
+            <label for="userHobbys">취미</label>
+            <input type="checkbox" name="userHobbys[]" id="" value="등산">등산
+            <input type="checkbox" name="userHobbys[]" id="" value="등산">하산
+            <input type="checkbox" name="userHobbys[]" id="" value="등산">등산
+            <input type="checkbox" name="userHobbys[]" id="" value="등산">하산
+            <input type="checkbox" name="userHobbys[]" id="" value="등산">등산
+
+            <input type="submit" value="회원가입">
+
+            전화번호
+
+            <select name="phon1" id="">
+              <option value="010">010</option>
+              <option value="011">011</option>
+              <option value="014">014</option>
+              <option value="017">017</option>
+            </select> -
+            <input type="text" name="phon2" size="4" maxlength="4" id=""> -
+            <input type="text" name="phon3" size="4" maxlength="4" id="">
+
+          </br>
+          <label for="memo">자기소개서</label>
+          </br>
+          <textarea name="memo" id="" cols="30" rows="10"></textarea><br>
+
+          <input type="submit" value="회원가입">
+       </form>
+
+</body>
+</html>

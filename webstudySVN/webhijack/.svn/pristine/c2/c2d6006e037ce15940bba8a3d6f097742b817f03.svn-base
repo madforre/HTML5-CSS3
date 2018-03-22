@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/nav.css">
+    
+<div id="wrap">
+    <div class="nav">
+       <ul>
+        <li><img src="images/how.png" alt="how"></li>
+        <li><img src="images/note.png" alt="note"></li>
+        <li><img src="images/now.png" alt="now"></li>
+        <li><img src="images/talk.png" alt="talk"></li>
+        <li><img src="images/wow.png" alt="wow"></li>
+        </ul>
+    </div>
+</div>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <script>
+
+      var boxParent={
+        name:'멋진 박스',
+        countBox:10,
+        boxCoin:1000,
+        boxMethod:function(){
+            console.log("box이름 : " +this.name);
+            console.log("box갯수 : " +this.countBox);
+            console.log("box코인 : " +this.boxCoin);
+
+            return this.boxCoin-this.countBox;
+        }
+
+      }
+
+      var box1=document.getElementsByClassName("box1")[0];
+      var box2=document.getElementsByClassName("box2")[0];
+      var box3=document.getElementsByClassName("box3")[0];
+
+      var box = document.getElementsByTagName("div");
+      console.log(box);
+      console.log(box[0]);
+
+      box1.textContent=boxParent.name;
+      box2.textContent=boxParent.boxCoin;
+      box3.textContent=boxParent.boxMethod();
+
+    </script>
+
+</body>
+</html>

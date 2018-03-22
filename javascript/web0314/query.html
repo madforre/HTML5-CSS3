@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+
+  var query = prompt("쿼리문을 입력하세요(select,insert,update,delete)")
+
+  switch (query) {
+            case "select": alert("회원조회사이트로 이동합니다.");
+                 location.href="/member.List.php";
+                 break;
+
+            case "insert": alert("회원조회사이트로 이동합니다.");
+                 location.href="/member.Insert.php";
+                 break;
+
+            case "update": alert("회원조회사이트로 이동합니다.");
+                 location.href="/member.Update.php";
+                 break;
+
+            case "delete": alert("회원조회사이트로 이동합니다.");
+                 location.href="/member.Delete.php";
+                 break;
+
+            default: alert("쿼리문을 입력하셔야죠ㅎㅎ");
+
+            }
+
+  </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

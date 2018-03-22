@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.gallery{
+  width : 98%;
+  max-width:1200px;
+  height:600px;
+  border:1px solid;
+  margin:0 auto;
+  position : relative;
+  text-align: center;
+  background: #acd;
+  line-height: 600px;
+  font-size: 70px;
+  color : #fff;
+
+}
+
+.gallery span.arrow{
+  display : block;
+  width : 50px;
+  height : 50px;
+  background: #aea;
+  position:absolute;
+  top:275px;
+  border-radius: 50%;
+  /*cursor:pointer;*/
+  cursor: crosshair;
+
+}
+
+.gallery span.arrow:hover{
+  background:#000;
+  box-shadow : 10px 10px 10px #ccc;
+}
+
+.gallery span.arrow.arrow_left{
+  left:50px;
+}
+
+.gallery span.arrow.arrow_right{
+  right:50px;
+}
+
+.gallery span.arrow.mouse{
+  position: absolute;
+  left : 40%;
+  top : 500px;
+  border-radius: 0%;
+  width : 20%;
+  background: #fff;
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.box {
+  width : 800px;
+  height : auto;
+  border : 1px solid #f00;
+  margin : 0 auto;
+}
+
+.box div{
+  width : 100%;
+  height  : 200px;
+  border : 1px soild;
+}
+
+.box .box1{
+  background: radial-gradient(red,yellow,green);
+}
+
+.box .box2{
+  background: radial-gradient(red 0%, yellow 20%, green 60%);
+}
+
+.box .box3 {
+  background: radial-gradient(circle, skyblue 0%, pink 20%, beige 60%)
+}
+
+.box .box4 {
+  background: repeating-radial-gradient(circle, skyblue 0%, pink 20%, beige 30%);
+}

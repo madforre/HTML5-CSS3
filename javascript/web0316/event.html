@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn1">BUTTON1</button>
+  <button class="btn2">BUTTON2</button>
+  <button class="btn2">BUTTON3</button>
+  <button>BUTTON4</button>
+  <div class="box"></div>
+
+</body>
+
+<script> // 선택자 >> 이벤트 >> 이벤트리스너(핸들러) >> 함수(구현,처리)
+  var btn1Id=document.getElementById('btn1');
+  var box=document.getElementsByClassName('box')[0];
+
+  ///btn1Id.addEventListener('mousedown',btn1Down);
+
+  btn1Id.onmousedown=btn1Down;
+  btn1Id.onmouseup=btn1Up;
+  btn1Id.onclick=btn1Click;
+
+  function btn1Down(){
+    box.innerHTML="btn1Down 마우스 다운 중입니다.";
+    console.log("btn1 mousedown Event 발생");
+  }
+  function btn1Up(){
+    box.innerHTML="btn1Up  마우스 업 중입니다.";
+    console.log("btn1 mouseup Event 발생");
+  }
+  function btn1Click(){
+    // box.innerHTML="btn1Click  클릭했을 때 발생.";
+    console.log("btn1 onclick Event 발생");
+  }
+
+  var btn2Class=document.getElementsByClassName('btn2')[0];
+
+  btn2Class.onclick=function(){
+    box.innerHTML="BUTTON 2 클릭했을때 발생" ;
+    console.log("btn2 onclick Event 발생");
+  }
+
+  var btn3Class=document.getElementsByClassName('btn2')[1]
+
+  btn3Class.onmouseover=btn3over;
+  btn3Class.onmouseout=btn3out;
+
+  function btn3over(){
+    box.innerHTML="버튼 3 오버중입니다.";
+    console.log("버튼 3 오버중입니다.")
+  };
+
+  function btn3out(){
+    box.innerHTML="버튼 3 아웃중입니다." ;
+    console.log("버튼 3 아웃중입니다.")
+  }
+
+
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // console.log("콘솔에 표시");
+    // var result=confirm("다음 사이트로 이동하시겠습니까?");
+    // console.log("결과값 :" + result);
+    // if (result){
+    //   location.href="http://daum.net" ; //특정 페이지로 이동//
+    // } else {
+    //    history.go(-1) // 바로 이전 페이지로 이동 //4
+    // }
+
+
+
+    //  if (result){
+    //    window.alert("다음으로 이동합니다.");
+    //    window.location.href="http://daum.net"; //특정 페이지로 이동//
+    //    } else {
+    //      alert("네이버로 이동합니다.");
+    //      location.href="http://naver.com";
+    //   }
+
+      // prompt("아이디를 입력하세요");
+      // prompt("비밀번호를 입력");
+      // var rs1=prompt("비밀번호입력");
+
+      // prompt("아이디를 입력하세요");
+      // prompt("비밀번호를 입력하세요");
+      var userId = prompt("아이디를 입력하세요");
+      var userPw = prompt("비밀번호를 입력하세요");
+
+      if (userId =="jgh" && userPw =="1111"){
+        alert("회원이 맞습니다.");
+        document.write("인증 완료")
+      } else{
+        document.write("회원이 아닙니다. 5초 뒤 다음 홈페이지로 이동합니다.");
+        setTimeout(function(){location.href="http://daum.net"},5000);
+
+        //history.go(-1);//-숫자만큼 뒤로
+        //history.back();// 바로 이전페이지
+      }
+
+
+    //
+    // window.console.log("콘솔에 표시");
+    // window.document.write("document에 표시");
+    // window.alert("팝업기능");
+    // window.prompt("입력창");
+    //
+    // window.confirm("확인 창")
+    // 확인 누르면 true 취소 누르면 false 값 반환한다.
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

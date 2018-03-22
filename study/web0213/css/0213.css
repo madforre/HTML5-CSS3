@@ -1,0 +1,16 @@
+div.box{
+            width:1000px;
+            height: auto;
+            border:1px solid #f00;
+            margin 0 auto;
+        }      
+
+div.box h1 {width:200px; height: 100px; background: blue;  /*하위 선택*/}
+div.box>h1 {width:200px; height: 100px; background: #cccccc; /*자식 선택*/} 
+
+div.box h2 {width:200px; height:50px; background-color:#00DDDD;}
+
+div.box h3 {width:300px; height: 100px; background-color:bisque;}
+div.box h4 { background-color:tomato;}
+div.box h5 { width:200px; height:100px; background-color: rgb(155,50,50);}
+div.box h6 { width:150px; height: 50px; background-color:powderblue;}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+#wrap{
+    
+    width: 100%; 
+    height: auto; 
+    border : 2px solid black;
+    
+    margin-top:30px;
+
+}
+
+.box { 
+    
+    width: 750px; 
+    height: auto; 
+    background: skyblue; 
+    border : 1px solid black;
+    margin: 0 auto; 
+    overflow:hidden;
+
+}
+
+.box>ul>li {
+    
+    width: 125px; 
+    height: 70px; 
+    color: aliceblue; 
+    float:left; 
+    text-align:center; 
+    line-height:68px;
+    border : 1px solid black;
+    box-sizing : border-box;
+
+}
+
+.box>ul>li:hover{
+    background: powderblue;
+   color:#ffffff; /*인라인 속성인 a 태그에는 적용이 안되네?*/
+}
+
+.box>ul>li>a{
+/*    display: block; */
+/*    블록 속성으로 a태그를 바꿔줬다. 박스 크기만큼 클릭반경이 넓어진다.*/
+}
+
+
+.box>ul>li>a:hover { /*인라인 속성이기 때문에 따로 호버해줘야 작동한다*/
+    color:white;
+    text-decoration : underline;
+    
+}

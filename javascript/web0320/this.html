@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+  <script>
+  //this란? 함수나 객체 자신을 나타낸다. << 선언 위치에 따라 범위가 다르다.
+    // window의 객체는 어디에서든지 사용 가능
+
+    function windowSize() {
+        var width =this.innerWidth;// 브라우저의 width
+        var height=this.innerHeight; // 브라우저의 height
+
+        return "브라우저 width="+width+", height="+height;
+    }
+
+    if(this.innerWidth<=763){
+      document.body.style.background="#ff0";
+    }
+
+    ////////////////////////////
+
+    var width2=1000; // 전역변수
+
+    var shape={
+        width2 : 300
+
+    };
+
+    var showWidth=function(){
+      console.log(this.width2);
+    }
+
+
+    //////////////////////////////////
+
+    var ob={
+      width : 100,
+      height : 200,
+      obMethod:function(){
+
+        return this.width+this.height;
+        //객체안의 this는 객체 자신을 나타낸다.
+
+      }
+    }
+
+    /////////////////////////////////////////
+
+    var width3 = 600;
+    var shap2={
+        width3:300
+        // getWidth=function(){
+        //   console.log(this.width3);
+        // } 밑에서 메서드를 집어넣은 것과 동일
+    };
+
+    var showWidth3=function(){
+        console.log(this.width3);
+    }
+    shap2.getWidth=showWidth3; //메서드를 집어넣은 것이다.
+
+  </script>
+
+</body>
+</html>

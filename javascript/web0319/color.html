@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+  <div class="box">Box</div>
+
+
+  <script>
+      var colors=['white','black','custom'];
+      var box = document.getElementsByClassName('box')[0];
+      box.style.width="200px";
+      box.style.height="50px";
+      box.style.border="10px solid rgba(102, 130, 130,1)";
+      box.style.boxSizing="border-box";
+      box.style.textAlign="center";
+      box.style.lineHeight="25px";
+      box.style.fontSize="20px";
+      box.style.background="rgba(198, 135, 135,0.7)";
+
+      // 나중에 배우는 method chain 기법
+      // css('width', '200px').css('height', '50px');
+      // css({'width':'200px', 'height':'50px'});
+
+      colors[2]='red';
+
+      console.log(colors);
+
+      box.textContent=colors[2];
+
+  </script>
+
+</body>
+</html>

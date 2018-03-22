@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>예비군</title>
+  <style>
+
+  .body {
+
+  }
+
+  .pop {
+    width : 100%;
+    margin : 0 auto;
+    height : 550px;
+    background: #ccc;
+    color : #fff;
+    text-align: center;
+    line-height: 550px;
+    font-size: 20px;
+  }
+
+
+
+  </style>
+</head>
+<body>
+  Pop Up페이지
+
+  <div class="pop">
+
+    안녕 난 팝업이야
+    <button class="btnClose">CLOSE</button>
+    누르면 꺼진단다ㅎㅎ
+
+
+
+  </div>
+
+
+  <script>
+
+    var btnClose = document.getElementsByClassName('btnClose')[0];
+
+    btnClose.addEventListener('click',closeWindow);
+
+    function closeWindow(){
+      window.close();
+    }
+
+
+  </script>
+
+
+</body>
+</html>

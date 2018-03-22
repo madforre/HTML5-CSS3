@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+  function timeToday(){
+
+  var currentTime=new Date();
+
+  var day=currentTime.getDate(); // 날짜(일)
+  var year=currentTime.getFullYear(); // 년도
+  var week=currentTime.getDay(); // 요일 (일요일 0)
+  var month=currentTime.getMonth(); // 값에 +1 해주면 현재의 달이 된다.
+  var hour=currentTime.getHours(); // 시간
+  var minute=currentTime.getMinutes(); // 분
+  var second=currentTime.getSeconds(); // 초
+
+  switch(week){
+    case 0 : weekday="일요일"; break;
+    case 1 : weekday="월요일"; break;
+    case 2 : weekday="화요일"; break;
+    case 3 : weekday="수요일"; break;
+    case 4 : weekday="목요일"; break;
+    case 5 : weekday="금요일"; break;
+    case 6 : weekday="토요일"; break;
+    default : weekday="해당 요일이 없습니다." ;
+  }
+  var today=year+"년 "+month+"월 "+day+"일 "+hour+"시 "+minute+"분 "+second+"초 "+weekday;
+
+  console.log(today);
+
+      document.body.innerHTML=today;
+
+  };
+
+  setInterval(timeToday,1000);
+
+  </script>
+
+</body>
+</html>

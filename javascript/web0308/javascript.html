@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  window.onload=function(){
+
+    console.log(1);
+    document.getElementById('btn1').addEventListener('click',btnOnClicked);
+    function btnOnClicked(){
+       console.log("click Event 발생")
+    }
+
+}
+  //주석(설명): 해석 ...X(한줄 주석)
+
+  /*
+  멀티주석
+  */
+  </script>
+</head>
+<body>
+
+  <script>
+    console.log(2);
+  </script>
+
+  <button id="btn1">BTN1</button>
+  <button class="btn2">BTN2</button>
+  <button class="btn2">BTN3</button>
+  <button class="btn2">BTN4</button>
+  <button>BTN5</button>
+  우리들은 DOM이다.
+  <div id="txt">
+
+  </div>
+
+  <script>
+      console.log(3);
+  </script>
+
+  <script>
+    // window.onload=function(){
+      console.log(4);
+    // }
+  </script>
+
+</body>
+</html>

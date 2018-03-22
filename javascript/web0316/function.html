@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<body>
+
+   <button>BUTTON1</button>
+   <button>BUTTON2</button>
+   <button>BUTTON3</button>
+   <button>BUTTON4</button>
+
+   <script>
+
+      var btn= document.getElementsByTagName('button');
+
+       btn[0].addEventListener('click',fun1);
+
+       function fun1(){
+           func1();
+       }
+       var num=0;
+       function func1(){
+           console.log("매개인자가 없고 반환값 없는 함수>> "+num);
+           num++;
+         //  return;
+       }
+
+       ////////////////////////////////////////////////
+
+       btn[1].addEventListener('click',fun2);
+
+       function fun2(){
+           func2("manso",100);// call
+       }
+
+       function func2(name,age){
+           console.log("이름: "+name);
+           console.log("나이: "+age);
+           console.log("매개인자가 있고 반환값 없는 함수>> "+num);
+           //return;
+       }
+
+       /////////////////////////
+
+       btn[2].addEventListener('click',plus);
+
+       function plus(){
+                    //정수형값으로 변환 //문자열
+          var num3=parseInt(prompt("첫번째 숫자를 입력해보세요"));
+          var num4=parseInt(prompt("두번째 숫자를 입력해보세요"));
+
+           plusFunc(num3, num4);
+
+       }
+       function plusFunc(num1, num2){
+           var sum=num1+num2;
+           console.log(num1+"+"+num2+"="+sum);
+
+       }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
+</html>

@@ -1,0 +1,74 @@
+body{
+  background: powderblue;
+}
+.box {
+  width : 800px;
+  height : auto;
+  border : 1px solid #f00;
+  margin : 0 auto;
+  background: #fff;
+}
+
+.box>div{
+  width : 100%;
+  height : 200px;
+  border : 1px solid;
+}
+
+.box>.box1 {
+background: red; /* For browsers that do not support gradients */
+background: radial-gradient(#154c6d , #71c0c5);
+}
+
+.box>.box2 {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top left, olive, pink);
+  background: -o-linear-gradient(top left, olive, pink);
+  background: linear-gradient(to bottom right, olive, pink);
+}
+
+.box>.box3{
+  background: red; /* For browsers that do not support gradients */
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75% );
+  color : #fff;
+  font-size : 30px;
+  text-align: center;
+  line-height : 200px;
+}
+
+.box>.box4{
+  background: red; /* For browsers that do not support gradients */
+  background: linear-gradient(-270deg, red, yellow);
+  color : #fff;
+  font-size : 30px;
+  text-align: center;
+  line-height : 200px;
+}
+
+.box>.box5{
+  background: red; /* For browsers that do not support gradients */
+  background: linear-gradient(red, yellow, green);
+  color : #fff;
+  font-size : 30px;
+  text-align: center;
+  line-height : 200px;
+}
+
+.box>.box6{
+  background: red; /* For browsers that do not support gradients */
+  background: linear-gradient(to right,#f00,#ff6709,#ff0,#00ff00,#00f,#0d0d9a,#8129df);
+  color : #fff;
+  font-size : 30px;
+  text-align: center;
+  line-height : 200px;
+;
+}
+
+.box>.box7{
+  background: red; /* For browsers that do not support gradients */
+  background: repeating-linear-gradient(red, yellow 10%, green 20%);
+  color : #fff;
+  font-size : 30px;
+  text-align: center;
+  line-height : 200px;
+}

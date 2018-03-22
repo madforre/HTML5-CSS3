@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+
+  <script>
+
+      //변수 "하나의 data"
+      //배열 "하나 이상 data 그룹화(순서대로)"
+
+    var hotel={
+          name:'k_hotel',
+          rooms:40,
+          booked:25,
+          swimming:true,
+          roomType:['spring','summer','fall','winter'],
+          check: function(){
+            return this.rooms-this.booked;
+          }
+    };
+
+    console.log(hotel.check());
+
+    hotel.check();
+    hotel.name;
+    hotel.booked;
+    hotel.swimming;
+    hotel.roomType[0];
+
+  </script>
+
+</body>
+</html>

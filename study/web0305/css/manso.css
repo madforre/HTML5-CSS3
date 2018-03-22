@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+#wrap {
+  width : 100%;
+  height : 100%;
+  /*max-width: 1280px;*/
+  margin : 0 auto;
+  background : #2a92d2 /* 브라우저가 그라디언트를 인식하지 못할 경우 이 색깔 적용 */;
+  background: -ms-linear-gradient(to bottom right, #5bd5dd, #2a92d2);
+  background: -moz-linear-gradient(to bottom right, #5bd5dd, #2a92d2);
+  background: -webkit-linear-gradient(to bottom right, #5bd5dd, #2a92d2);
+  background: linear-gradient(to bottom right, #5bd5dd, #2a92d2);
+}
+
+.header {
+  width : 100%;
+  height: 200px;
+  position : fixed;
+  left : 0;
+  top : 0;
+  z-index: 10;
+}
+
+.section{
+  width : 100%;
+  height : 100%;
+  border : 10px solid #cf0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*header 시작*/
+
+
+.header .topMenu{
+  width : 960px;
+  height : 200px;
+  margin : 0 auto;
+  background: rgba(255, 255, 0, 0);
+  position : relative;
+}
+
+.header .topMenu .logo{
+  position : absolute;
+  width : 100%;
+  height : 100%;
+  background: #95d2ff85;
+  font-size: 180px;
+  text-align:center;
+  line-height : 200px;
+  color : #07b6ec6b;
+  font-weight: 100;
+}
+
+.header .topMenu .gnb{
+  width : 100%;
+  height : auto;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  z-index : 3;
+  overflow: hidden;
+}
+
+.header .topMenu .gnb ul li{
+  width : 12%;
+  float : left;
+  box-sizing: border-box;
+  line-height: 50px;
+  text-align: center;
+}
+
+.header .topMenu .gnb>ul>li:nth-child(1){
+  width : 28%;
+  font-size : 30px;
+  font-weight: 500;
+  letter-spacing : 5px;
+}
+
+
+.header .topMenu .gnb>ul>li>a{
+  color:#ffffffc4;
+}
+
+.header .topMenu .gnb>ul>li>a:hover{
+  text-decoration:underline;
+  color:#fff;
+}
+
+/*section 시작*/
+
+.section > .contents{
+  width : 1200px;
+  height : 600px;
+  border : 10px solid;
+  position : relative;
+  margin : 0 auto;
+  top : 300px;
+}
+
+.section .gallery{
+  width  : 500px;
+  height : 600px;
+  border : 10px solid #00f;
+  position : absolute;
+  left:0;
+  bottom:0;
+  box-sizing: border-box;
+}
+
+.section .text{
+  width : 700px;
+  height : 600px;
+  border : 10px solid #fff;
+  position : absolute;
+  right : 0;
+  top : 0;
+  box-sizing: border-box;
+}
+
+
+/* gallery 시작 */
+
+  .section>.contents .gallery{
+  background : url(../images/bg0.png) no-repeat 50%;
+  background-size: cover;
+
+  animation-name:bgGallery;
+  animation-duration:7s;
+  animation-iteration-count: infinite;*/
+}
+
+@keyframes bgGallery{
+  20%{
+    background:url(../images/bg1.png) no-repeat 50%;
+    background-size:cover;
+  }
+  40%{
+    background:url(../images/bg1.png) no-repeat 50%;
+    background-size:cover;
+  }
+  60%{
+    background:url(../images/bg2.png) no-repeat 50%;
+    background-size:cover;
+  }
+  80%{
+    background:url(../images/bg3.png) no-repeat 50%;
+    background-size:cover;
+  }
+}
+
+/*text 시작*/
+
+.section > .contents .text .sub{
+
+  padding : 30px;
+}
+
+.section > .contents .text .sub.sub1{
+  line-height : 50px;
+  font-size:40px;
+  color:#fff;
+}
+
+.section > .contents .text .sub.sub2{
+  line-height : 25px;
+  font-size:20px;
+  color:#fff;
+  margin:50px 0 100px;
+}
+
+.section > .contents .text .sub.sub3{
+  overflow:hidden;
+}
+
+.section > .contents .text .sub.sub3 span.btn{
+  display:block;
+  width:200px;
+  background: #555;
+  float:left;
+  line-height : 30px;
+  text-align: center;
+  color : #fff;
+}
+
+.section > .contents .text .sub.sub3 span.btn.login{
+margin-left: 70px;
+border-radius: 10px;
+line-height : 40px;;
+
+}
+
+.section > .contents .text .sub.sub3 span.btn.join{
+float : right;
+margin-right : 70px;
+border-radius: 10px;
+line-height : 40px;
+}
+
+.section>.contents .text .sub.sub3 span.btn:hover{
+  background:#333;
+  cursor:pointer;
+  transition: .3s;
+  text-decoration: underline;
+}

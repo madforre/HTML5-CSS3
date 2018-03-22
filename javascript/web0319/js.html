@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+      // 배열
+      // 배열 선언 1
+
+      var arrInt=new Array(); ///
+      arrInt[0]=10;
+      arrInt[1]=20;
+      arrInt[2]=30;
+      arrInt[3]=40;
+      arrInt[4]=50;
+      arrInt[5]  = test();
+
+
+      document.write("배열 arrInt : "+arrInt+"<br>");
+      document.write("배열 arrInt의 총 갯수 : " +arrInt.length+"<br>");
+
+
+     function test(){
+
+        function test2(){
+          document.write("see me? <br>");
+
+        };
+        test2();
+
+      };
+
+    var arrInt2=new Array();
+
+    for(var i=0;i<7;i++){
+      arrInt2[i]=i+1;
+      console.log(arrInt2[i]);
+    };
+
+    var arrImg=[];
+
+    // arrImg[0]="img/bg0.jpg";
+    // arrImg[1]="img/bg1.jpg";
+    // arrImg[2]="img/bg2.jpg";
+    // arrImg[3]="img/bg3.jpg";
+    // arrImg[4]="img/bg4.jpg";
+
+    for(var i=0;i<5;i++){
+      arrImg[i]="<img src='/images/bg"+i+".jpg' alt='' width='150px'><br>";
+      document.write(arrImg[i]);
+      console.log(arrImg[i]);
+    };
+
+    
+
+
+
+  </script>
+
+</body>
+</html>

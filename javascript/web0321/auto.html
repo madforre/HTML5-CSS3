@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+  <div class="gallery">
+    GALLERY
+  </div>
+
+  <script>
+
+  var gallery =  document.querySelector('.gallery');
+  gallery.style.width="800px";
+  gallery.style.height="600px";
+  gallery.style.margin="0 auto";
+  gallery.style.border="1px solid #f00";
+
+
+  var keyNum=0;
+
+    setInterval(autoGallery,1000);
+
+    function autoGallery(){
+
+      console.log("img/bg"+keyNum+".jpg");
+
+      gallery.style.background="url('img/bg"+keyNum+".jpg') no-repeat 50%";
+      gallery.style.backgroundSize="cover";
+
+
+
+      if(keyNum == "4"){
+
+        keyNum = -1;
+
+      };
+
+      keyNum++;
+
+    };
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+#box{
+  width : 300px;
+  margin : 0 auto;
+  height : auto;
+  background: #ada;
+  overflow: hidden;
+
+}
+
+input{
+  display: block;
+}
+
+.pad button{
+  width : 70%;
+  height : 30px;
+  background: #ccc;
+}
+
+.ca button{
+  width : 30%;
+  line-height : 30px;
+  background: #ccc;
+}
+
+.contents{
+  width : 50%;
+  height : auto;
+}
+
+.contents.left{
+  float : left;
+}
+
+.contents.right{
+  background: #aaa;
+  float : left;
+}
+
+
+/*패드*/
+
+.pad {
+
+}
+
+.pad ul{
+  width : auto;
+  height : auto;
+  overflow: hidden;
+
+}
+.pad ul li{
+
+  text-align: center;
+  width : 50px;
+  line-height : 50px;
+  color : #fff;
+  background: #0aa;
+  float : left;
+}
+
+
+.ca {
+
+}
+
+.ca ul li{
+  text-align: center;
+  line-height : 55px;
+  background: #0aa;
+  color : #fff;
+}
