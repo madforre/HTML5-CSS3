@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+
+  <div id="page">
+
+    <h1 id="header">목록</h1>
+    <h2>h2 요소 node</h2>
+      <ul>
+        <li id="one" class="hot"><em>무화과</em></li>
+        <li id="two" class="hot">사과 , 기준</li>
+        <li id="three" class="hot">참외</li>
+        <li id="four">수박</li>
+      </ul>
+
+      <script src="js/list.js"></script>
+  </div>
+
+  <div id="box">dd</div>
+
+  <script>
+
+  var page = document.getElementById('page');
+  page.style.width = "200px";
+  page.style.height = "auto";
+  page.style.border = "1px solid";
+  page.style.margin = "0 auto";
+
+  var headerId=document.getElementById('header');
+
+  headerId.textContent; // get
+  headerId.textContent="manso" ; // set
+
+  var oneId=document.getElementById('one');
+
+  var newLi = document.createElement('li'); //딸기
+  var strawberry=document.createTextNode('딸기');
+  newLi.appendChild(strawberry);
+
+  console.log(newLi);
+
+  var ulId=document.getElementById('ulId');
+
+  ulId.appendChild(newLi);
+
+  // var twoId=document.getElementById('two');
+
+  </script>
+
+  사과, 기준은 텍스트 노드이다.
+  그 노드의 값을 만지려면 .nodeValue 를 써서 변경한다.
+
+</body>
+</html>

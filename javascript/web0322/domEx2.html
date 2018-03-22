@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/domEx.css">
+  <style>
+  #page{
+
+  }
+
+  .cool {
+    background: #f00;
+  }
+
+  .add1{
+    background: #f00;
+    color: #fff;
+
+  }
+
+  .add2{
+    background: #00f;
+    color: #fff;
+
+  }
+  </style>
+
+</head>
+<body>
+  <div id="page">
+
+    <h1 id="header">목록</h1>
+    <h2>h2 요소 node</h2>
+      <ul>
+        <li id="one" class="hot"><em>무화과</em></li>
+        <li id="two" class="hot">사과</li>
+        <li id="three" class="hot">정의</li>
+        <li id="four">수박</li>
+      </ul>
+
+      <script src="js/list.js"></script>
+  </div>
+
+  <script>
+
+  var page = document.getElementById('page');
+  page.style.width = "200px";
+  page.style.height = "auto";
+  page.style.border = "1px solid";
+  page.style.margin = "0 auto";
+
+  var headerId=document.getElementById('header');
+
+  // console.log(headerId.parentNode);
+  // console.log(headerId.parentElement);
+  // console.log(headerId.parentNode.parentNode);
+  // console.log(headerId.parentNode.childNodes);
+
+  var oneId = document.getElementById('one');
+  var oneQuery = document.querySelector('#one');
+  var hotClass1 = document.getElementsByClassName('hot');
+  var hotClass2 = document.querySelectorAll('li.hot');
+
+  //선택자 앞 형제
+  console.log(hotClass1[1].previousSibling);
+  console.log(hotClass1[1].previousElementSibling); //특정 태그 값
+  hotClass1[1].previousElementSibling.className="add1";
+
+  //선택자 뒤 형제
+  console.log(hotClass1[1].nextSibling);
+  console.log(hotClass1[1].nextElementSibling); //특정 태그값
+  hotClass1[1].nextElementSibling.className="add2";
+
+  //선택자 자식의 첫번째, 마지막번째 요소
+  var ulTag=document.getElementsByTagName('ul')[0];
+
+  console.log(ulTag);
+  console.log(ulTag.firstChild);
+  console.log(ulTag.lastChild);
+  console.log(ulTag.firstElementChild);
+  console.log(ulTag.lastElementChild);
+                    // 브라우저마다 차이가 있다고 한다. 엘리먼트 붙은거 쓰자!
+
+  ulTag.firstElementChild.style.height="50px";
+  ulTag.lastElementChild.style.height="100px";
+
+
+
+  </script>
+
+</body>
