@@ -3,12 +3,16 @@ firstStartup=false
 history.comment=amdo;Zm9yIHRlc3QuIHNvcnJ5IHNpcg\=\=
 history.repositoryURL=aHR0cHM6Ly8zMjItVC9zdm4vbWFuc28\=
 history.repositoryUser=bWFkZm9ycmU\=
+org.eclipse.team.svn.ui.crashrecovery.relocated.RelocationChoicesPanel.height=72
+org.eclipse.team.svn.ui.crashrecovery.relocated.RelocationChoicesPanel.width=470
 org.eclipse.team.svn.ui.panel.ListSelectionPanel.height=195
 org.eclipse.team.svn.ui.panel.ListSelectionPanel.width=470
 org.eclipse.team.svn.ui.panel.callback.AskTrustSSLServerPanel.height=303
 org.eclipse.team.svn.ui.panel.callback.AskTrustSSLServerPanel.width=530
 org.eclipse.team.svn.ui.panel.common.CommentPanel.height=146
 org.eclipse.team.svn.ui.panel.common.CommentPanel.width=510
+org.eclipse.team.svn.ui.panel.local.AddRepositoryPanel.height=109
+org.eclipse.team.svn.ui.panel.local.AddRepositoryPanel.width=470
 org.eclipse.team.svn.ui.panel.local.CommitPanel.height=406
 org.eclipse.team.svn.ui.panel.local.CommitPanel.width=600
 org.eclipse.team.svn.ui.panel.remote.CreateFolderPanel.height=200

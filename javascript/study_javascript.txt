@@ -1065,6 +1065,11 @@ DOM 트리 정리
 	현재 요소의 마지막 자식 노드를 선택한다.
 	// 선택한 node의 마지막 자식 (node)
 
+	게코엔진(구글)은 공백을 읽으므로
+	sibling이랑 child는
+	.nextElementSibling
+	.firstElementChild 이런식으로 써주어야 한다.
+
 2. 요소 조작하기
 
 .nodeValue();
@@ -1157,3 +1162,72 @@ var position = document.getElementsByTagName('ul')[0];
 position.appendChild(newE1);
 
 -----------------------------------
+
+Gecko 기반 브라우저는 소스 마크업에서 공백을 나타내기 위해
+문서 내에 텍스트 노드를 삽입합니다. 그러므로 예를 들어
+Node.firstChild나 Node.previousSibling을 통해서 얻은 노드는
+작성자가 얻으려 한 실제 요소와는 달리 공백 텍스트 노드를
+참조할 지도 모릅니다.
+
+--------------------------------
+
+**CSS 하위 요소들은 부모를 기준으로 상대 %단위로 크기 설정하면 좋다.
+
+--------------------------------
+
+.appendChild();
+
+	The appendChild() method appends a node as the last child of a node.
+
+	노드를 요소의 마지막 자식에 추가한다.
+
+.insertBefore();
+
+	The insertBefore() method inserts a node as a child, right before(바로 전에) an existing child, which you specify.
+
+	ex) .insertBefore(얘를,얘 전에삽입)
+
+.hasChildNodes();
+
+	The hasChildNodes() method returns true if the specified node has any child nodes, otherwise false.
+
+ 	자식이 있느냐? true 없으면 false 값 리턴한다.
+
+.removeChild();
+
+	The removeChild() method removes a specified child node of the specified element.
+
+	특정 자식노드를 삭제
+
+.replaceChild();
+
+	The replaceChild() method replaces a child node with a new node.
+
+	.replaceChild("요소의 값", 변경 값")
+
+.createElement();
+
+	The createElement() method creates an Element Node with the specified name.
+
+	요소를 생성
+
+.createTextNode();
+
+	The createTextNode() method creates a Text Node with the specified text.
+
+	생성한 요소에 text값을 set
+
+------------------------------------
+
+getAttribute('가져올 속성');
+
+setAttribute("속성","설정");
+
+-----------------------------
+
+이벤트 중단 방식
+
+event.stopPropagation()
+e.preventDefault();
+e.stopImmediatePropagation()
+return false;

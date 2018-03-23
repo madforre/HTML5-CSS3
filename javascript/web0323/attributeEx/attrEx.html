@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.map{
+			width:400px;
+			height:400px;
+			margin: 0 auto;
+			background: #000;
+			position: relative;
+			}
+
+		.map .mapContent{
+			width:100%;
+			height: auto;
+			position: absolute;
+			bottom:0;
+			left:0;
+			}
+
+		.map .mapContent>ul>li{
+			width:50%;
+			height: 200px;
+			border:1px solid #f00;
+			box-sizing: border-box;
+			float:left;
+			}
+
+		.layer{
+			width: 300px;
+			height:300px;
+			position: fixed;
+			left:0;
+			top:0;
+			background: rgba(55,55,55,0.2);
+			}
+		.box{
+			width: 40%;
+			height: 40%;
+			position: absolute;
+			left:30%;
+			top:30%;
+			border: 1px solid #00f;
+			background: #fff;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="map">
+
+		<div class="mapContent">
+			<ul>
+				<li class="list">
+					<img src="#" alt="" class="listImg">
+					<div class="txt">map1</div>
+					<a href="http://daum.net">다음</a>
+				</li>
+				<li class="list">
+					<img src="#" alt="" class="listImg">
+					<div class="txt">map2</div>
+					<a href="http://naver.com">naver</a>
+				</li>
+				<li class="list">
+					<img src="#" alt=""  class="listImg">
+					<div class="txt">map3</div>
+					<a href="http://baraboda.com">바라보다</a>
+				</li>
+				<li class="list">
+					<img src="#" alt=""  class="listImg">
+					<div class="txt">map4</div>
+					<a href="http://apple.com">애플</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="layer">
+		<div class="box">
+			<img src="" alt="" class="layerImg">
+			<div class="layerTxt"></div>
+			<a href="" class="layerLing">이동하기</a>
+			<button class="close">CLOSE</button>
+		</div>
+
+	</div>
+
+	<script>
+
+		var list=document.getElementsByClassName('list');
+		var listSize=list.length;
+
+
+		for(var i=0;i<listSize;i++){
+			list[i].addEventListener('click',popFun);// 이벤트를 설정
+		}
+
+		var layerImg=document.getElementsByClassName('layerImg')[0];
+		var layerTxt=document.getElementsByClassName('layerTxt')[0];
+		var layerLiink=document.getElementsByClassName('layerLing')[0];
+
+		function popFun(e){
+
+			console.log(e.target);
+
+			var src=e.target.getElementsByClassName('listImg')[0].getAttribute('src');
+			var txt=e.target.getElementsByClassName('txt')[0].textContent;
+			var linkEx=e.target.getElementsByTagName('a')[0].getAttribute('href');
+
+			layerImg.setAttribute('src',src);
+			layerTxt.textContent=txt;
+			layerLiink.setAttribute('href',linkEx);
+
+		}
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

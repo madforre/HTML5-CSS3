@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lunch</title>
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<style>
+.one{
+  background:#c00;
+}
+.two{
+  background:#00c;
+}
+
+
+</style>
+<body>
+  <div id="parent">
+    <div class="gnb" id="o">
+      <ul>
+        <li class="list">MENU0</li>
+        <li class="list"><a href="next.html">next</a></li>
+        <li class="list">MENU2</li>
+        <li class="list"><img src="img/bg0.jpg" alt="대체문구"></li>
+        <li class="list">MENU4</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+
+    var class_get = document.getElementById('parent').firstElementChild.getAttribute('class');
+    //
+    // if (class_get == "gnb"){
+    //
+    //   var gnb = document.getElementsByClassName('gnb')[0];
+    //   gnb.setAttribute('class','one');
+    //
+    // }
+    var name2 = document.getElementById('o')
+
+    function repeat(){
+
+
+
+    switch (name2.className) {
+
+
+      case name2 = "gnb"
+
+          :
+          console.log('hi');
+                // name2.setAttribute('class','one');
+                break;
+      case "one":
+                setAttribute('class','two');
+                break;
+      case "two":
+                setAttribute('class','gnb');
+                break;
+      default:
+
+    }
+    };
+
+    setInterval(repeat,1000);
+    // 왜 안될까? 1 -> 2 -> 3 -> 1
+
+    
+
+
+
+
+  </script>
+
+</body>
+</html>

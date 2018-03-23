@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bara.css">
+</head>
+<body>
+
+<div class="bannerGallery">
+  <div class="mainGallery">
+    <ul>
+      <li class="list">1</li>
+      <li class="list">2</li>
+      <li class="list">3</li>
+      <li class="list">4</li>
+      <li class="list">5</li>
+    </ul>
+  </div>
+  <span class="arrow arrow_left"></span>
+  <span class="arrow arrow_right"></span>
+</div>
+
+<script>
+
+
+//  수업방식은 셋인터벌 안주고
+//   li에 클래스로 list를 다주고 이벤트리스너의 함수에
+//  ulTag.appenChild(list[0]); 줬음.
+//  리스트의 0번째를 계속 ul에 어팬드차일드 해준다.
+
+// function repeat(){
+
+  var bannerGallery=document.getElementById('bannerGallery');
+  var mainGallery=document.getElementsByClassName('mainGallery')[0];
+  var ulTag=document.getElementsByTagName('ul')[0];
+  var arrowLeft=document.getElementsByClassName('arrow_left')[0];
+  var arrowRight=document.getElementsByClassName('arrow_right')[0];
+  var list=document.getElementsByClassName('list');
+
+  var ulFirst=ulTag.firstElementChild;
+  var ulLast=ulTag.lastElementChild;
+
+
+  // arrowLeft.addEventListener('click',appendChildFun);
+  //
+
+  //
+  // arrowRight.addEventListener('click',insertFun);
+  //
+  // function insertFun(){
+  //   ulTag.insertBefore(ulLast,ulFirst);
+  // }
+
+    function appendChildFun(){
+      ulTag.appendChild(list[0]);
+    }
+
+
+    var setInt=setInterval(appendChildFun,1000);
+    // 자동으로 넘어가게
+
+    arrowLeft.addEventListener('mouseover',galleryStop);
+    arrowRight.addEventListener('mouseover',galleryStop);
+    function galleryStop(){
+      clearInterval(setInt);
+    }
+
+    arrowLeft.addEventListener('mouseout',galleryRestart);
+    arrowRight.addEventListener('mouseout',galleryRestart);
+    function galleryRestart(){
+
+      var setInt=setInterval(appendChildFun,1000) // 다시시작 명령
+    }
+
+  // };
+  //
+  // setInterval(repeat,'2000');
+
+//////////////////////
+
+
+
+
+
+</script>
+
+왼쪽 버튼클릭 >>> ul 첫번째 자식 >>>
+
+ul 마지막 자식뒤에 .appendChild() "나의 자식 마지막
+뒤 추가"
+
+</body>
+</html>
