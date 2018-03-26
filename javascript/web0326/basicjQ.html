@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <script>
+  $(document).ready(function(){
+      // $('*').css('margin','0');
+      // $('*').css('padding','0');
+      $('*').css({'margin':'0','padding':'0', 'background':'#ccc'});
+      $('html, body').css({'width':'100%', 'height' : '100%'});
+      $('a').css({'text-decoration':'none', 'color' : '#000'});
+      $('ol,ul,li').css({'list-style':'none'});
+      $('img').css({'border':['0']});
+      $('#page').css({'width':'300px', 'height' : 'auto', 'border' : '1px solid', 'margin' : '0 auto'});
+      $('#page h1#header').css({
+        'height' : '100px',
+        'background' : '#fe0',
+        'text-align' : 'center',
+        'line-height' : '100px'
+      });
+      $('#page > h2').css({
+        'height' : '50px',
+        'background' : '#cfc',
+      });
+      $('#page > ul li.hot').css({
+        'background' : '#5bf',
+        'color' : '#fff'
+      })
+      $('#page > ul li#one').css({'background':'#f0f'});
+      $('#page > ul li#one + li').css({'background':'#f00'});
+      $('#page > ul li:odd').css({'background' : '#350'});
+      $('#page > ul li:even').css({'background' : '#fff'});
+      $('#page > ul li:first').css({'font-size':'20px'});
+      $('#page > ul li:last').css({'font-size':'30px'});
+      $('#page > ul li:not("#one")').css({'font-size':'100px'});
+      $('#page > ul li:nth-child(1)').css({'background':'#f11'});
+      $('#page > ul li:nth-child(2)').css({'background':'#faa'});
+      $('#page > ul li:nth-child(3)').css({'background':'#a5a'});
+      $('#page > ul li:nth-child(4)').css({'background':'#adf'});
+      $('#page > ul li:first-child').css({'background' : '#551'});
+      $('#page > ul li:last-child').css({'background' : '#1df'});
+      // $('#page > ul li').css({'background' : '#cfc'});
+
+
+
+
+  });
+
+  </script>
+</head>
+<body>
+  <div id="page">
+    <h1 class="" id="header">List</h1>
+    <h2>구입 물품 목록</h2>
+    <ul>
+      <li id="one" class="hot"><em>신선한</em> 무화과</li>
+      <li id="two" class="hot">잣</li>
+      <li id="three" class="hot">꿀</li>
+      <li id="four">발사믹 식초</li>
+    </ul>
+  </div>
+
+</body>
+</html>

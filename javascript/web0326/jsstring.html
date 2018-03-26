@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>string</title>
+</head>
+<body>
+
+  Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.
+
+  <script>
+
+      var str1="so 2018 2 GO";
+      var str2=new String("so");
+
+      console.log("문자열 길이: "+str1.length); //공란 포함
+      console.log(str1.indexOf("2")); // 찾는 문자열의 앞에서 첫번째
+      console.log(str1.lastIndexOf("2")); // 찾는 문자열 끝에서부터 첫번째
+
+      console.log(str1.slice(1,4)); // slice(시작,끝); // 시작~끝
+            // 1,4는 1번째 인덱스부터 3번째 인덱스 까지
+      console.log(str1.slice(-4,-1)); // -는 끝에서 가져오는 것이다.
+            // -8, -1 는 끝에서 1번째 인덱스부터 3번째 인덱스 까지
+
+
+      var query0="insert.php"
+      var query1="updateDo.php"
+      var query2="deleteAction.php"
+      var query3="selectList.php"
+
+      query0.substr(0,6);
+      query1.substr(0,8);
+      query2.substr(0,12);
+      query3.substr(1,10);
+
+      // query.length ; // 10
+
+      query0.substr(0,6);
+      query1.substr(0,8);
+      query2.substr(0,12);
+      query3.substr(0,10);
+
+
+
+  </script>
+
+</body>
+</html>

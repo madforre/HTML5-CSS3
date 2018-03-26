@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+      var person = {
+        "userId" : "manso",
+        "userPw" : "1111",
+        "userAge" : 20,
+        "userPhone" : "010-0000-0000"
+      }
+
+      // 콘솔에 아이디 : manso, 비밀번호 : 1111, 나이 : 20, 전화번호 : 010-0000-0000
+
+      console.log("아이디: "+person.userId+", 비밀번호 : "+person.userPw+
+          "나이 :"+person.userAge+", 전화번호:"+person.userPhone);
+
+          console.log(person['userId']);
+          console.log(person['userPw']);
+          console.log(person['userAge']);
+          console.log(person['userPhone']);
+
+          person.userAge=30;
+          console.log(person['userAge']);
+
+          person['userAge']=40;
+          console.log(person['userAge']);
+
+    </script>
+
+</body>
+</html>

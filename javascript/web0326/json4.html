@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var jsonOb={
+      'name' : 'jsonName',
+      'age' : 20,
+      'jsonsub' : {
+        'subName' : 'subName',
+        'subAge':20
+      },
+      'jsonArrName' : ['one', 'two', 'three'],
+      'select' : true,
+      'nullTrue' : null
+    };
+
+    console.log(jsonOb.name);
+    console.log(jsonOb.age);
+    console.log(jsonOb.jsonsub);
+    console.log(jsonOb.jsonsub.subName);
+    console.log(jsonOb.jsonsub.subName+" type : "+(typeof jsonOb.jsonsub.subName));
+
+    console.log(jsonOb.jsonArrName);
+    console.log(jsonOb.jsonArrName[0]);
+
+    for(i=0;i<jsonOb.jsonArrName.length;i++){
+    console.log(jsonOb.jsonArrName[i]);
+    }
+
+    console.log(jsonOb.select);
+    console.log(typeof jsonOb.select);
+    console.log(jsonOb.nullTrue);
+    console.log(typeof jsonOb.nullTrue);
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

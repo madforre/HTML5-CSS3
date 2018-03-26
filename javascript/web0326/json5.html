@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>배열도 객체다.</title>
+</head>
+<body>
+  <div id="jsonTxt"></div>
+
+  <script>
+
+
+  var myObj =  { "name" : "john", "age" : "20", "car" : "null"};
+
+  for (x in myObj){
+  	document.getElementById("jsonTxt").innerHTML += x + "<br>";
+  }
+
+
+  var myObj2 = {
+    "name" : "John",
+    "age" : 20,
+    "car" : {
+          "car1":"Ford",
+          "car2":"BMW",
+          "car3":"Fiat"
+    }
+  }
+
+  for (x2 in myObj2){
+    console.log(x2);
+  }
+
+  var jsonArr={
+    "members" : {
+    "userId":['so1','so2','so3','so4'],
+    "userPw" :[1111,2222,3333,4444],
+    "userAge" : [10,20,30,40]
+    }
+  };
+  //
+
+  var arrJson={
+    "members" : [
+      {"userId" : 'man', "userPw" : "11"},
+      {"userId" : 'man2',"userPw" : "12"},
+      {"userId" : 'man3',"userPw" : "13"}
+    ]
+  };
+
+  var pw13 = arrJson.members[2]["userPw"]
+
+console.log(pw13)
+
+console.log(arrJson.members[0]);
+console.log(arrJson.members[0]["userPw"]);
+console.log(arrJson.members[1]);
+console.log(arrJson.members[1]['userId']);
+console.log(arrJson.members[2]);
+console.log(arrJson.members[2]['userPw']);
+
+for(js in jsonArr){
+  console.log(js)
+};
+
+for(idx in arrJson){
+  console.log(idx)
+}
+
+
+for(idx in arrJson.members){
+  console.log(idx)
+}
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+</body>
+</html>

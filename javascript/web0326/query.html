@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>query</title>
+</head>
+<body>
+    <script>
+
+      var query=prompt("query문을 입력하세요(insert.php,update.php,selectList.php,delete.php)");
+
+
+      // query문이 "insert" 회원가입 페이지로 이동합니다.
+      //
+      // query문이 "update" 회원수정 페이지로 이동합니다.
+      //
+      // query문이 "selectList" 회원조회 페이지로 이동합니다.
+      //
+      // query문이 "delete" 회원삭제 페이지로 이동합니다.
+
+      // if문이나 switch를 이용해서 실행해보세요.
+      // substr함수를 이용해서 실행해보세요.
+
+
+      var sql = query.substr(0,query.length-(".php".length));
+      console.log(sql);
+
+      switch(sql){
+
+        case "insert" : alert('query문이 '+sql+' 회원가입 페이지로 이동합니다.');
+          break;
+
+        case "update" : alert('query문이 '+sql+' 회원수정 페이지로 이동합니다.');
+          break;
+
+        case "selectList" : alert('query문이 '+sql+' 회원조회 페이지로 이동합니다.');
+          break;
+
+        case "delete" : alert('query문이 '+sql+' 회원삭제 페이지로 이동합니다.');
+          break;
+
+        default : alert('제시된 query문만 입력하세요.');
+          break;
+      }
+
+
+      // 내가 생각했었던 코드
+
+      // switch(query){
+      //
+      //   case "insert.php" : alert('query문이 '+query.substr(0,6)+' 회원가입 페이지로 이동합니다.');
+      //     break;
+      //
+      //   case "update.php" : alert('query문이 '+query.substr(0,6)+' 회원수정 페이지로 이동합니다.');
+      //     break;
+      //
+      //   case "selectList.php" : alert('query문이 '+query.substr(0,10)+' 회원조회 페이지로 이동합니다.');
+      //     break;
+      //
+      //   case "delete.php" : alert('query문이 '+query.substr(0,6)+' 회원삭제 페이지로 이동합니다.');
+      //     break;
+      //
+      //   default : alert('제시된 query문만 입력하세요.');
+      //     break;
+      // }
+
+
+    </script>
+
+</body>
+</html>

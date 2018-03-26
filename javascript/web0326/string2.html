@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트</title>
+</head>
+<body>
+  <script>
+
+    var txt1="Hello ";
+    var txt2="World";
+
+    var txt3=txt1.concat(txt2);
+
+    console.log(txt3);
+
+    var txt4=txt1.concat("concat ","dot ", txt2);
+
+    console.log(txt4)
+
+    //
+
+    var phone="010-1234-5678";
+    var phoneSplit=phone.split("-");
+
+    console.log(phoneSplit);
+    console.log(typeof phoneSplit);
+
+    console.log(phoneSplit[0]);
+    console.log(typeof phoneSplit[0]);
+
+    console.log(phoneSplit[1]);
+    console.log(typeof phoneSplit[1]);
+
+    console.log(phoneSplit[2]);
+    console.log(typeof phoneSplit[2]);
+
+    var phoneStr = phoneSplit[0].concat("-", phoneSplit[1],"-",phoneSplit[2]);
+
+    console.log(phoneStr)
+    console.log(typeof phoneStr)
+
+
+  </script>
+
+</body>
+</html>
