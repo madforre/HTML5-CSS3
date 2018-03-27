@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Document</title>
+
+</head>
+
+<style>
+  .box{
+    width : 800px;
+    height : 600px;
+    border : 1px solid;
+    margin : 0 auto;
+  }
+
+  .sub{
+    height : auto;
+    border : 1px solid;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+  button{
+    width : 20%;
+    display: block;
+    float : left;
+    height : 50px;
+  }
+
+  .gallery{
+    width : 100%;
+    height : 100px;
+    background: #555;
+  }
+  .gallery2{
+    width : 100%;
+    height : 500px;
+  }
+
+</style>
+<body>
+
+  <div class="box">
+    <div class="sub">
+      <button id="btn1">BUTTON1</button>
+      <button class="btn2">BUTTON2</button>
+      <button class="btn2">BUTTON3</button>
+      <button class="btn2">BUTTON4</button>
+      <button class="btn2">BUTTON5</button>
+    </div>
+
+    <div class="gallery">
+    누르세요
+    </div>
+    <div class="gallery2">
+
+    </div>
+  </div>
+
+  <script>
+    var btn1Id=$('#btn1');
+    var btn2Class=$('.btn2');
+    var btnTag=$('button');
+    var gallery=$('.gallery');
+    var gallery2=$('.gallery2');
+
+    gallery.css({
+      'color':'#fff',
+      'font-size' : '90px',
+      'text-align' : 'center',
+      'line-height' : '80px'
+    })
+
+  //   btn1Id.on('click',function(e){
+  //     console.log(e.target);
+  //     console.log(e.type);
+  //     console.log($(this).index());
+  //     gallery.css({'background' : '#a10'
+  //     });
+  //     gallery.text(e.type);
+  // });
+  //
+  // btn2Class.eq(0).on('mouseover',fun1);
+  // function fun1(e){
+  //   console.log(e.target);
+  //   console.log(e.type);
+  //   gallery.css({'background':'#ff0'})
+  //   gallery.text(e.type);
+  //   console.log($(this).index());
+  // }
+  // btn2Class.eq(0).on('mouseout',fun2);
+  // function fun2(e){
+  //   console.log(e.target);
+  //   console.log(e.type);
+  //   gallery.css({'background':'#00f'})
+  //   gallery.text(e.type);
+  //   console.log($(this).index());
+  // }
+  //
+  // btn2Class.eq(1).on('mousedown',function(e){
+  //   fun3(e);
+  // });
+  //
+  // function fun3(e){
+  //   console.log(e.target);
+  //   console.log(e.type);
+  //   gallery.css({'background' : '#a0f'});
+  //   gallery.text(e.type);
+  //   console.log($(this).index());
+  // }
+  //
+  // btn2Class.eq(1).on('mouseup',function(e){
+  //   fun4(e);
+  // });
+  //
+  // function fun4(e){
+  //   console.log(e.target);
+  //   console.log(e.type);
+  //   gallery.css({'background' : '#000'});
+  //   gallery.text(e.type);
+  //   console.log($(this).index());
+  // }
+  //
+  // btn2Class.eq(2).on('click',function(e){
+  //     console.log(e.target);
+  //     console.log(e.type);
+  //     gallery.css({'background' : '#0f0'});
+  //     gallery.text(e.type);
+  //     console.log($(this).index());
+  //
+  // });
+  //
+  // btnTag.eq(4).on('click',function(e){
+  //   console.log(e.target);
+  //   console.log(e.type);
+  //   gallery.css({'background' : '#070'});
+  //   gallery.text(e.type);
+  //   console.log($(this).index());
+  // }
+  // );
+  //
+  // console.log($('.btn2'))
+  // console.log($('.btn2')[0])
+  // console.log($('.btn2')[1])
+  // console.log($('.btn2')[2])
+  // console.log($('.btn2').length)
+  var arrBg=['#eef','#ccf','#aaf','#77f','#00f'];
+
+
+  btnTag.on('click',function(e){
+    gallery.text($(this).index());
+
+
+    //수업 중 개발자 방식
+
+    for(var i=0;i<size;i++){
+      if(e.target==btnTag[i]){
+        gallery.css({'background' : arrBg[i]})
+      }
+    }
+
+    // 수업방식
+
+    // var idx=$(this).index();
+
+    // switch(idx){
+    //   case 0 : gallery.css({'background' : arrBg[0]}); break;
+    //   case 1 : gallery.css({'background' : arrBg[1]}); break;
+    //   case 2 : gallery.css({'background' : arrBg[2]}); break;
+    //   case 3 : gallery.css({'background' : arrBg[3]}); break;
+    //   case 4 : gallery.css({'background' : arrBg[4]}); break;
+    //   default :
+    // }
+  });
+
+  // var arrBg2=[
+  //   'url(img/bg1.jpg) no-repeat 50%',
+  //   'url(img/bg2.jpg) no-repeat 50%',
+  //   'url(img/bg3.jpg) no-repeat 50%',
+  //   'url(img/bg4.jpg) no-repeat 50%',
+  //   'url(img/bg5.jpg) no-repeat 50%'
+  // ]
+
+
+  var arrBg2=[];
+
+  var size=btnTag.length;
+  for(var i=1;i<size+1;i++){
+    //배열의 마지막 자식위에 추가(없을 경우 처음부터)
+    arrBg2.push('url(img/bg'+i+'.jpg) no-repeat 50%');
+  }
+
+
+  btnTag.on('click',function(e){
+    console.log($(this).index());
+
+    var idx=$(this).index();
+
+    switch(idx){
+      case idx : gallery2.css({'background' : arrBg2[idx]}); break;
+      // case 1 : gallery2.css({'background' : arrBg2[idx]}); break;
+      // case 2 : gallery2.css({'background' : arrBg2[idx]}); break;
+      // case 3 : gallery2.css({'background' : arrBg2[idx]}); break;
+      // case 4 : gallery2.css({'background' : arrBg2[idx]}); break;
+      default :
+    }
+
+
+  });
+
+  </script>
+
+
+</body>
+</html>

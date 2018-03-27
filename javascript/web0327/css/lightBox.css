@@ -1,0 +1,90 @@
+/*lightBox*/
+
+.lightBox {
+  width : 1200px;
+  height : 800px;
+  margin : 0 auto;
+  overflow: hidden;
+}
+
+.lightBox >ul > li{
+  width : 50%;
+  height : 400px;
+  float : left;
+  background: #aaa;
+}
+
+.lightBox >ul > li >img {
+  width : 95%;
+  height : 300px;
+  display: block;
+  margin : 0 auto;
+}
+
+.lightBox >ul > li >.txt {
+
+  width : 95%;
+  height : 90px;
+  color : #000;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  border : 2px solid;
+  box-sizing: border-box;
+  margin : 0 auto;
+  margin-top: 5px;
+  background: #fff;
+}
+
+/*레이어 시작*/
+
+.layer {
+  width : 100%;
+  height: 100%;
+  position : fixed;
+  left : 0px;
+  top : 0px;
+  background: rgba(0, 0, 0, 0.5);;
+  display: none;
+}
+
+.layer .gallery {
+  width : 400px;
+  height : 600px;
+  position : absolute;
+
+}
+
+.layer .gallery .top{
+  height: auto;
+}
+
+.layer .gallery .top>img{
+  display:block;
+  width : 400px;
+  margin : 0 auto;
+  background : #acf;
+  margin-bottom : 50px;
+}
+
+.layer .gallery .top>.text{
+  height: auto;
+  line-height: 150px;
+  background: #ccc;
+  text-align: center;
+  color : #fff;
+  font-size: 50px;
+  margin : 0 auto;
+}
+
+.layer span.close {
+
+  display : block;
+  width: 50px;
+  line-height : 50px;
+  background: #555;
+  margin : 0 auto;
+  text-align: center;
+  font-size: 30px;
+  color : #fff;
+}

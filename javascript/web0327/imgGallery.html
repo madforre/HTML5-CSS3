@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<style>
+
+img{
+  display : block;
+}
+
+.box{
+width : 1000px;
+height : auto;
+border : 10px solid;
+margin : 0 auto;
+
+}
+
+.sub{
+  height: auto;
+
+  overflow: hidden;
+
+}
+
+.sub ul li{
+  float : left;
+  width : 200px;
+  height : 200px;
+
+
+}
+
+.sub ul li img{
+
+  width : 300px;
+  margin : 0;
+
+}
+
+.gallery{
+  background: #ccc;
+  height: 700px;
+  transition : all 0.5s;
+
+}
+
+.gallery .galleryTxt{
+  width : 300px;
+  height : 100px;
+  background: #fff;
+  position : relative;
+  color : #000;
+  top : 300px;
+  left : 200px;
+  line-height: 100px;
+  text-align: center;
+  font-size:50px;
+}
+
+.gallery img{
+  width : 300px;
+  height : 300px;
+  display : block;
+  position : relative;
+  top: 300px;
+  left : 200px;
+  border : 2px solid #fff;
+  box-sizing: border-box;
+
+}
+
+.gallerySub{
+  width : 100%;
+  height : 100%;
+  border : 1px solid;
+  margin : 0 auto;
+  position : fixed;
+  left : 0;
+  top : 0;
+  background: rgba(0,0,0,0.5);
+  display : none;
+
+}
+
+
+.gallerySub .galleryTxt{
+  width : 500px;
+  height : 100px;
+  background: #fff;
+  position : relative;
+  margin : 0 auto;
+  text-align: center;
+  font-size: 50px;
+  margin-top : 250px;
+  color : #000;
+  line-height: 100px;
+
+
+}
+
+.gallerySub button.exit {
+
+  display: block;
+  width : 70px;
+  height: 70px;
+  margin : 0 auto;
+  background: #fff;
+  font-size: 40px;
+
+}
+
+.gallerySub img{
+  width : 500px;
+  height : 400px;
+  margin : 0 auto;
+}
+
+
+</style>
+
+<body>
+
+  <div class="box">
+    <div class="sub">
+      <ul>
+        <li><img src="img/bg1.jpg" alt="bg1"></li>
+        <li><img src="img/bg2.jpg" alt="bg2"></li>
+        <li><img src="img/bg3.jpg" alt="bg3"></li>
+        <li><img src="img/bg4.jpg" alt="bg4"></li>
+        <li><img src="img/bg5.jpg" alt="bg5"></li>
+      </ul>
+    </div>
+    <div class="gallery">
+    </div>
+
+    <div class="gallerySub">
+
+      <div class="galleryTxt"></div>
+      <img src="" alt="">
+      <button class="exit">X</button>
+
+    </div>
+
+
+  </div>
+
+  <script>
+
+  var liList=$('.sub>ul>li');
+  var gallery=$('.gallery');
+  var galleryTxt=$('.gallery .galleryTxt');
+  var gallerySubTxt=$('.gallerySub .galleryTxt');
+  var gallerySub=$('.gallerySub');
+
+
+  liList.on('click',function(e){
+    var idx=$(this).index();
+    var imgSrc=$(this).find('img').attr('src');
+    var imgAlt=$(this).find('img').attr('alt');
+    console.log(imgAlt);
+
+    var galleryImg=gallery.find('img');
+
+
+    // console.log(imgSrc);
+    gallerySubTxt.text(imgAlt);
+
+    gallery.css({'background' : 'url('+imgSrc+') no-repeat 50%', 'background-size' : 'cover'});
+
+    gallerySub.fadeIn(400);
+
+    gallerySub.find('img').attr('src',imgSrc);
+
+  });
+
+  gallerySubTxt.on('click', function(e){
+    $(this).parent().fadeOut();
+
+  });
+
+  $('.exit').on('click', function(e){
+    gallerySub.fadeOut(400);
+
+  });
+
+  </script>
+
+</body>
+</html>

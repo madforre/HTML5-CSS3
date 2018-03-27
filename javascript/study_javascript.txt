@@ -1693,8 +1693,8 @@ html 관련 요소를 get, set 할 때 쓴다.
 
 -------------------------------
 
-.text(); // 선택자의 text Content get
-.text('값'); // 선택자의 text Content set$
+$.text(); // 선택자의 text Content get
+$.text('값'); // 선택자의 text Content set
 
 --------------------------------
 
@@ -1703,3 +1703,146 @@ css()
 $.css('속성'); // get
 $.css('속성','값'); // set
 $.css({'속성':'값', '속성':'값', '속성':'값', '속성':'값'}); // set
+
+------------------------------
+
+animate 자동갤러리
+fade() 자동갤러리
+scroll() 스크롤
+wheel() 마우스 휠
+append() ,prepen() 자동 갤러리
+
+--------------------------------
+
+append(), prepend() 메서드의 차이
+
+	prepend : 선택한 요소의 자식요소 앞에 내용삽입
+	append : 선택한 요소의 자식요소 뒤에 내용삽입
+
+attr() : 일반적인 태그속성의 값을 변경하고자 할때는 attr()함수를 사용
+
+animate() : Perform a custom animation of a set of CSS properties.
+
+.animate( properties [, duration ] [, easing ] [, complete ] )
+
+------------------------------
+
+jQuery객체 jQuery('선택자')
+$객체				$('선택자')
+wrapper
+
+객체={
+					속성(프로퍼티)
+					메서드:function(){}
+}
+
+-------------------------------
+
+
+
+
+
+
+--------------------------
+
+체크박스
+
+보통 선택 전 이미지와 선택 후 이미지로 대체해서 퍼블리싱을 하는 경우가 많다.
+
+하지만 굳이 이미지로 박지 않아도, CSS를 이용해서 체크박스의 스타일을 변경할 수 있다.
+
+// 반드시 input의 id와 label의 for값을 맞춰 작성해야한다.
+
+// CSS 특징 : label 옆의 checkbox를 보이지 않게 한 후, 가상요소 :before를 이용하여
+	체크박스자리에 원하는 모양으로 체크박스를 만들어주는 것이다.
+	그리고 역시 :checked를 이용하여, 체크됐을 때의 모양도 꾸며주면 끝!
+
+
+
+
+회원가입 폼 각각 name,value,id 값을 적절히 입력
+
+아이디 text
+비밀번호 password
+취미 checkbox
+전화 번호 selectList 자기소개 textarea
+회원가입 submit
+
+------------------------------
+
+$선택자.click(function(){});
+$선택자.mousedown(function(){});
+선택자.onclick=function(){};
+선택자.addEventListener('click',함수);
+
+$선택자.on('이벤트, 이벤트',함수);
+$선택자.on( click:function(){},
+ 						mousedown:function(){},
+						mouseup:function(){},
+						mouseover:function(){} );  여러가지 이벤트를 한번에!
+
+------------------------------
+
+jQuery API 정복 - 인덱스로 요소 찾기, eq()
+
+
+.eq( index )Returns : jQuery
+
+개요 : 인덱스 번호가 해당하는 요소를 찾습니다.
+
+예제 :
+
+btn2Class.eq(0).on('mouseover',fun1);
+function fun1(e){
+	console.log(e.target);
+	console.log(e.type);
+	gallery.css({'background':'#ff0'})
+}
+
+.eq( index )
+index 0이 초기값이며 요소의 위치를 표시하는 정수값
+
+.eq( -index )
+index 맨 마지막 요소부터 역순으로 표시하는 음수형 정수값
+
+--------------------------------
+
+$.attr('속성');// get
+$.attr('속성','값') ; // set
+
+--------------------------------------
+
+$(this).find('태그,아이디,클래스');// 자신의 하위 태그 중에서
+
+------------------------
+
+$.fadeIn(시간); // none >> block "서서히 나타나라"
+$.fadeOut(시간); // block >> none "서서히 사라져라"
+
+-------------------------
+
+브라우저가 HTML 파일을 읽어오는 순서
+
+1. (사용자가 웹페이지를 방문) - 웹브라우저시작
+
+2. (브라우저가 웹문서를 읽기 시작) - 웹문서읽기
+
+3. (DOM이 생성되면 ready메소드가 실행된다.)
+
+4. 이미지를 포함한 요소들이 로드되기 시작한다.
+
+5. (모든 요소들이 로드가 완료되면 load 메소드가 실행된다.)
+
+		- 페이지 로딩완료
+
+
+jQuery ready와 load의 차이???
+
+$(document).ready(function(){
+			alert('ojtiger.com');
+}); 3번에서 실행된다.
+
+$(window).load(function(){ alert('ojtiger.com');
+}); 5번에서 실행된다.
+
+--------------------------

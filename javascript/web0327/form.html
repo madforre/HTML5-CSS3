@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <script>
+      $(document).ready(function(){
+          $('#joinForm').css({
+              'width':'400px',
+              'border': '1px solid',
+              'text-align' : 'center',
+              'margin' : '0 auto'});
+          $('#joinForm input').css({'background' : '#ff0'})
+          $('#joinForm input[type=text]').css({'background' : '#f00'})
+          $('#joinForm input[type=password]').css({'background' : '#000'})
+          // $('#joinForm input[type=checkbox]').css({'border' : '5px solid'})
+          $('#joinForm input[type=submit]').css({'background' : '#00f'})
+          $('#joinForm input[type=reset]').css({'background' : '#f0f'})
+          $('#joinForm select').css({'background' : '#000'})
+
+          console.log($('#joinForm input[type=text]').val("id"));
+          console.log($('#joinForm input[type=password]').val("oo"));
+          // console.log($('#joinForm input[type=checkbox]').val("d"));
+          // console.log($('#joinForm input[type=radio]').val(""));
+          console.log($('#joinForm #userPhone1').val());
+          console.log($('#joinForm #userPhone2').val("0100"));
+          console.log($('#joinForm #userPhone3').val());
+          // 아이디나 비밀번호 확인.. 체크박스에 쓰인다.
+
+
+      });
+
+  </script>
+  <style>
+
+  #joinForm input[type=checkbox]{
+    display : none;
+
+  }
+
+  #joinForm label {
+    background: #ccc;
+    width : 50px;
+    height : 50px;
+  }
+  </style>
+</head>
+<body>
+  <form action="joinOk.php" method="post" id="joinForm">
+    아이디 : <input type="text" name="userId" id="userId">
+    <input type="button" id="idChecked" value="아이디확인"><br>
+
+    비밀번호 : <input type="password" name="userPw" id="userPw"><br>
+
+    성별 : <input type="radio" name="userGender" class="userGender" id="" value="남자"> 남자<br>
+           <input type="radio" name="userGender" class="userGender" id="" value="여자"> 여자<br>
+
+    취미 :
+    <input type="checkbox" name="userHobbys" id="mount" value="등산"><label for="mount">등산</label>
+    <input type="checkbox" name="userHobbys" id="" value="여행"><label for="userHobbys">여행</label>
+    <input type="checkbox" name="userHobbys" id="" value="야구"><label for="userHobbys">야구</label>
+    <br>
+    전화번호 : <select name="userPhone" id="userPhone">
+                <option value="010" selected="">010</option>
+                <option value="011">011</option>
+              </select> -
+              <input type="text" name="userPhone2" id="userPhone2"> -
+              <input type="text" name="userPhone2" id="userPhone3"><br>
+
+    자기 소개 :<br>
+    <textarea name="userAbout" id="userAbout" cols="30" rows="5"></textarea><br>
+
+    <input type="submit" value="회원가입" id="submit">
+    <input type="reset" value="재작성" id="reset">
+    <input type="button" value="회원가입2" id="submitOk">
+
+
+
+    <!-- // 나중에 배열로 다 처리한다. -->
+
+  </form>
+
+</body>
+</html>

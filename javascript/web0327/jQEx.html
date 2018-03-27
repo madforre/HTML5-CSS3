@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery 실습 0327 바라보다</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/lightBox.css">
+  <script src="js/lightBox.js"></script>
+
+</head>
+<body>
+
+  <div id="wrap">
+    <div class="lightBox">
+      <ul>
+        <li>
+          <img src="img/bg1.jpg" alt="bg1">
+          <div class="txt">imgContent1</div>
+        </li>
+        <li>
+          <img src="img/bg2.jpg" alt="bg2">
+          <div class="txt">imgContent2</div>
+        </li>
+        <li>
+          <img src="img/bg3.jpg" alt="bg3">
+          <div class="txt">imgContent3</div>
+        </li>
+        <li>
+          <img src="img/bg4.jpg" alt="bg4">
+          <div class="txt">imgContent4</div>
+        </li>
+      </ul>
+    </div>
+    <div class="layer">
+      <div class="gallery">
+        <div class="top">
+          <div class="text"></div>
+          <img src="" alt="">
+        </div>
+        <div class="bottom"></div>
+        <span class="close">X</span>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+  <script>
+
+  var liList = $('.lightBox>ul>li');
+  var layer = $('.layer');
+  var exit = $('.close');
+  var put_text = $('.text');
+  var put_img = $('.top>img');
+
+  liList.on('click',function(e){
+
+    var idx = $(this).index();
+    console.log(idx+1);
+    var imgSrc = $(this).find('img').attr('src')
+    console.log(imgSrc);
+    var imgAlt = $(this).find('img').attr('alt')
+    console.log(imgAlt);
+
+    layer.fadeIn(150);
+
+    put_text.text(imgAlt);
+    put_img.attr('src',imgSrc);
+    put_img.attr('alt',imgAlt);
+
+  });
+
+  exit.on('click',function(e){
+
+    layer.fadeOut(150);
+
+  });
+
+
+  </script>
+</html>
