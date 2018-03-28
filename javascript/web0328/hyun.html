@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/si.css">
+  <title>Hyun</title>
+</head>
+<body>
+    <div class="siblings">
+      <ul>
+        <li>
+          <div class="txt">TXT1</div>
+        </li>
+        <li>
+          <div class="txt">TXT2</div>
+        </li>
+        <li>
+          <div class="txt">TXT3</div>
+        </li>
+        <li>
+          <div class="txt">TXT4</div>
+        </li>
+        <li>
+          <div class="txt">TXT5</div>
+        </li>
+      </ul>
+    </div>
+    <script>
+    var li = $('.siblings>ul>li');
+    var li_size = li.length;
+    var arrImg=[];
+
+
+  function repeat(){
+
+    var arrImg=[];
+
+    for(i=0;i<li.length;i++){
+      var a = Math.floor(Math.random()*5+1);
+      arrImg.push('url(img/bg'+(a)+'.jpg) no-repeat 50%');
+
+      //원래는 i+1이 a였다. 랜덤함수를 위해 한 것.
+
+      li.eq(i).css({
+        'background' : arrImg[i],
+        'background-size' : 'cover'});
+
+    };
+  }
+setInterval(repeat,250);
+
+
+    li.hover(
+      function(){ // 마우스 over
+        $(this).css({'background-size' : '200%'});
+        $(this).find('.txt').fadeIn(100);
+
+      },
+      function(){ // 마우스 out
+         $(this).css({'background-size': 'cover'});
+         $(this).find('.txt').fadeOut(100);
+     });
+
+
+    </script>
+
+</body>
+</html>

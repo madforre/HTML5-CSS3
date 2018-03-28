@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>autoGallery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/autoGallery.css">
+</head>
+<body>
+	<div id="wrap">
+		<div class="nav">
+			<div class="gallery">
+				<ul>
+				
+					<li>GALLERY1</li>
+					<li>GALLERY2</li>
+					<li>GALLERY3</li>
+					<li>GALLERY4</li>
+					<li>GALLERY5</li>
+				</ul>
+				<div class="items">
+					<ul>
+						<li></li>
+						<li></li>
+						<li class="on"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<span class="arrow arrowLeft"></span>
+			<span class="arrow arrowRight"></span>
+		</div>
+		<script>
+			var nav=$('.nav');
+			var gallery=$('.gallery');
+			var galleryUl=$('.gallery>ul');
+			var galleryUlLi=$('.gallery>ul>li');
+			var items=$('.items');
+			var itemsUlLi=$('.items>ul>li');
+			var arrowLeft=$('span.arrowLeft');
+			var arrowRight=$('span.arrowRight');
+					
+			var galleryUlLeft=
+				galleryUlLi.eq(1).offset().left-galleryUlLi.eq(0).offset().left;
+			
+			var galleryUlLiLength=galleryUlLi.length;
+			
+			
+		
+			var key=1;
+			
+			function autoGallery(e){
+				key++;
+				console.log(key+"  **********")
+				galleryUl.animate({left:-galleryUlLeft*key});
+				
+				
+				
+				console.log(key)
+				console.log(galleryUl.css('left'))
+			
+				if(key>galleryUlLiLength-2){
+					    galleryUl.delay(3000).animate({left:"0"},0);
+					key=0;
+				}
+				itemsUlLi.eq(key).addClass('on').siblings().removeClass('on');
+									
+				
+			}
+			
+			
+			$('.arrow , .items>ul>li').hover(
+				function(){
+					clearInterval(setInt);
+				},
+				function(){
+					setInt=setInterval(autoGallery,3000);
+				}
+			);
+			/*
+			itemsUlLi.hover(
+				function(){
+					clearInterval(setInt);
+				},
+				function(){
+					setInt=setInterval(autoGallery,3000);
+				}
+			);*/
+			
+			
+			
+			
+			var setInt=setInterval(autoGallery,3000);
+			
+			
+			itemsUlLi.on('click',function(e){
+				$(this).addClass('on').siblings().removeClass('on');
+				
+			});
+			
+		
+		
+		
+		
+		</script>
+		
+	</div>
+	
+</body>
+</html>

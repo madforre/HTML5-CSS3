@@ -1846,3 +1846,215 @@ $(window).load(function(){ alert('ojtiger.com');
 }); 5번에서 실행된다.
 
 --------------------------
+
+// 선택한 자식의 앞/뒤 기준에
+
+append(value)
+
+	Inserts content at the end of selected elements
+
+	$.append('값'); // 선택자의 "마지막 자식 뒤에 추가"
+
+
+prepend(value)
+
+	inserts content at the beginning of selected elements
+
+	$.prepend('값'); // 선택자 "첫번째 자식 앞에 추가"
+
+
+// 선택한 1을 선택한 2의 자식 기준에
+
+appendTo(selector)
+
+	Inserts HTML elements at the end of selected elements
+
+	선택자1.appendTo(선택자2);// 선택자1을 선택자2 마지막 자식 뒤
+
+prependTo(selector)
+
+	inserts HTML elements at the beginning of selected elements
+
+	선택자1.prependTo(선택자2);// 선택자1을 선택자2 처음 자식 앞
+
+// 선택한 자신 기준
+
+after(value)
+
+	Inserts content after selected elements
+
+	$선택자.after(value); // 선택자 뒤에 value를 가져와 붙인다.
+
+before(value)
+
+	Inserts content before selected elements
+
+	$선택자.before(value); // 선택자 앞에 value를 가져와 붙인다.
+
+insertAfter(selector)
+
+	Inserts HTML elements after selected elements
+
+	$.insertAfter(selector); // 선택된 요소를 selector 뒤에 붙인다.
+
+insertBefore(selector)
+
+	Inserts HTML elements before selected elements
+
+	$.insertBefore(selector); // 선택된 요소를 selector 뒤에 붙인다.
+
+remove
+
+	Removes the selected elements (including data and events)
+
+empty()
+
+	All elements that are empty
+
+	선택된 요소들의 자식 요소를 삭제 한다.
+
+
+예제코드
+
+ul_li.on('click',function(e){
+
+	$(this).empty(); // 자기 자신이 텅빔. 자식 전체가 사라짐
+
+})
+
+ul_li.on('click',function(e){
+
+	$(this).remove(); // 자기 자신 자체가 사라짐
+
+})
+
+
+
+-------------------------------------------
+
+event.preventDefault() method
+
+	"기본적으로 적용된 이벤트를 제거"
+
+	e.preventDefault();
+
+	a, submit, button
+
+The event.preventDefault() method stops the default action
+of an element from happening.
+
+-------------------------------------
+// 클래스('on')을 추가 다른 형제는 'on'클래스 삭제
+addClass('on').siblings().removeClass('on');
+
+// 클래스('on')을 추가 다른 형제는 모든클래스 삭제
+addClass('on').siblings().removeClass('on');
+
+-------------------------------------------------
+jquery API hover
+
+.hover()
+Categories: Events > Mouse Events
+Bind one or two handlers to the matched elements,
+to be executed when the mouse pointer enters and leaves the elements.
+
+.hover( handlerIn, handlerOut )
+
+The .hover() method binds handlers for both mouseenter
+and mouseleave events. You can use it to simply apply behavior
+to an element during the time the mouse is within the element.
+
+ex)
+
+To add a special style to table cells that are being hovered over, try:
+
+1|	$( "td" ).hover(
+2|		 function() {
+3|  	 $( this ).addClass( "hover" );
+4|	 	 },      function() {
+5|  	 $( this ).removeClass( "hover" );
+6|		 }
+7|	);
+
+---------------------------------------------
+
+jQuery Traversing(탐색)
+
+https://www.w3schools.com/jquery/jquery_traversing.asp 참고
+
+*조회한 요소들의 집합에서 원하는 요소를 찾음
+
+1. eq(index)
+
+	- index와 일치한 요소 조회
+
+2. filter(표현식)
+
+	- 지정된 표현식과 일치하는 요소들 조회
+
+3.  is(표현식) : "있느냐?"
+
+	- 조회한 요소들 중 표현식을 만족하는 요소가 있으면
+	true(하나라도 있으면) 없으면 false
+
+4. not(표현식) :
+
+	-  표현식과 일치하지 않는 요소들 조회
+
+5. first()
+
+	- 요소의 첫번째
+
+	 $("div").first().css("background-color", "yellow");
+	 div태그의 첫번째
+
+6. last()
+
+	-요소의 마지막번째
+
+	$("div").last().text('ok');
+	div태그들 중 마지막번째 안에 ok를 넣는다. 덮어쓴다.
+	안에 이미 있던 요소들이 덮어씌워진다.
+
+7. find()
+
+	- 선택자 하위에서 필터링
+
+	$('.ok').find()
+	ok 라는 클래스 선택하고 그 하위에서 탐색한다.
+
+end();
+
+필터링 이전상태로 돌리는 메소드
+
+end()
+
+Ends the most recent filtering operation in the
+current chain, and return the set of matched elements
+to its previous state
+
+--------------------------------------------
+
+jquery 메서드
+
+.animate() // << effect, 효과관련
+.setInterval()
+.offset() // 위치관련
+.siblings()
+.addClass()
+.removeClass()
+
+---------------------------------
+
+offset()
+
+Syntax
+
+Return the offset coordinates:
+$(selector).offset()
+
+Set the offset coordinates:
+$(selector).offset({top:value,left:value})
+
+Set offset coordinates using a function:
+$(selector).offset(function(index,currentoffset))

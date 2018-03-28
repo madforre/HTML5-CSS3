@@ -1,0 +1,32 @@
+@charset "utf-8";
+.siblings{
+  width: 1000px;
+  height : auto;
+  margin : 0 auto;
+  border : 1px solid;
+  overflow: hidden;
+}
+
+.siblings>ul>li{
+  width : 20%;
+  height : 200px;
+  border : 1px solid;
+  box-sizing: border-box;
+  float : left;
+}
+
+.siblings>ul>li:hover{
+  cursor: pointer;
+}
+
+.siblings>ul>li .txt{
+  display: none;
+  width : 100%;
+  height : 50%;
+  background: #000;
+  margin-top: 50%;
+  color : #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 100px;
+}

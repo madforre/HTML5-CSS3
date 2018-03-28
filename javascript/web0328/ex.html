@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <title>Document</title>
+  <style>
+    .banner{
+      width:600px;
+      height:120px;
+      border : 1px solid;
+      margin : 0 auto;
+      position : relative;
+    }
+
+    .banner >ul>li{
+      width:120px;
+      height: 120px;
+      border : 1px solid;
+      float: left;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 120px;
+    }
+
+    .banner span.arrow{
+
+      width:50px;
+      height:50px;
+      background: #555;
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      top:35px;
+    }
+
+    .banner span.arrow:hover{
+      background: #505;
+      cursor: pointer;
+
+    }
+
+    .banner .arrow_left{
+      left:-50px;
+    }
+
+    .banner .arrow_right {
+      right : -50px;
+    }
+
+    .on {
+      background: #ccf;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <ul>
+      <li>LIST1</li>
+      <li>LIST2</li>
+      <li>LIST3</li>
+      <li>LIST4</li>
+      <li>LIST5</li>
+    </ul>
+    <span class="arrow arrow_left"></span>
+    <span class="arrow arrow_right"></span>
+  </div>
+
+  <script>
+    //내방식
+    var banner_ul=$('.banner>ul');
+
+    //수업방식
+    var ul_li=$('.banner>ul>li')
+
+    $('.arrow_left').on('click',function(e){
+
+      // 내방식
+      var li_first = $('.banner>ul>li:nth-child(1)')
+
+      // 수업방식
+      // var li_first = ul_li.eq(0);
+
+      banner_ul.append(li_first);
+      li_first.addClass('on').siblings().removeClass('on');
+
+    });
+
+    $('.arrow_right').on('click',function(e){
+
+      // 내방식
+      var li_last = $('.banner>ul>li:nth-child(5)')
+
+      // 수업방식
+      // var li_last = ul_li.eq(4);
+
+      banner_ul.prepend(li_last);
+      li_last.addClass('on').siblings().removeClass('on');
+
+    });
+
+    ul_li.eq(0).on('click',function(e){
+      console.log(e.target)
+      console.log($(this));
+      $(this).appendTo(ul_li.eq(3));
+      // this를 li 3번째의 자식의 마지막 뒤로 추가
+
+      // $(this).appendTo(banner_ul);
+      // this를  ul 마지막 자식 뒤
+    });
+
+    ul_li.eq(2).on('click',function(e){
+      console.log(e.target)
+      console.log($(this));
+
+      $(this).after(ul_li.eq(0))
+      // this를 기준으로 ()가 기준 앞에 온다.
+
+    });
+
+    ul_li.eq(3).on('click',function(e){
+      console.log(e.target)
+      console.log($(this));
+
+      $(this).before(ul_li.eq(0))
+      // this를 기준으로 ()가 기준 뒤에 온다.
+
+    });
+
+    ul_li.eq(4).on('click',function(e){
+      console.log(e.target)
+      console.log($(this));
+
+      $(this).insertBefore(ul_li.eq(0))
+      // this 를 ()앞에 넣는다.
+
+    });
+
+    ul_li.eq(1).on('click',function(e){
+      console.log(e.target)
+      console.log($(this));
+
+      $(this).insertAfter(ul_li.eq(3))
+      // this 를 ()뒤에 넣는다.
+
+    });
+
+    ul_li.on('click',function(e){
+
+      //이벤트 캡쳐링
+      //이벤트 버블링
+
+      // e.preventDefault(); // 이벤트를 없앤다.
+
+      // $(this).empty(); // 자기 자신이 텅빔. 자식 전체가 사라짐
+      //
+      // $(this).remove(); // 자기 자신 자체가 사라짐
+
+
+    })
+
+
+
+
+
+  </script>
+
+
+
+</body>
+</html>

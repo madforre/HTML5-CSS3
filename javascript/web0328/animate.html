@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>autoGallery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+<div id="wrap">
+  <div class="nav">
+    <div class="gallery">
+      <ul>
+        <li>GALLERY1</li>
+        <li>GALLERY2</li>
+        <li>GALLERY3</li>
+        <li>GALLERY4</li>
+        <li>GALLERY5</li>
+      </ul>
+      <div class="items">
+        <ul>
+          <li></li>
+          <li></li>
+          <li class="on"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="arrow arrow_left"></span>
+    <span class="arrow arrow_right"></span>
+
+
+
+  </div>
+</div>
+<script>
+  var nav=$('.nav');
+  var gallery=$('.gallery');
+  var gallery_ul=$('.gallery>ul');
+  var gallery_ul_li=$('.gallery>ul>li');
+  var items=$('.items');
+  var items_ul_li=$('.items>ul>li');
+  var arrow=$('.arrow');
+
+
+  var gallery_ul_left =
+  gallery_ul_li.eq(1).offset().left-
+  gallery_ul_li.eq(0).offset().left;
+
+  // var key=-1;
+  //
+  // function autoGallery(e){
+  //   key++;
+  //
+  //   gallery_ul.animate({left:-gallery_ul_left*key})
+  //
+  //   if(key==gallery_ul_li.length-1){
+  //     key=-1;
+  //     console.log(gallery_ul.css('left'));
+  //     console.log(gallery_ul_li.length);
+  //     console.log(key)
+  //   }
+  // }
+
+  var key=2;
+
+  function autoGallery(e){
+    key++;
+    console.log('key 값 : '+key)
+    console.log('현재 left 좌표는 '+gallery_ul_left*key+' px 입니다.');
+
+
+
+    gallery_ul.animate({left:-gallery_ul_left*key})
+
+    if(key==gallery_ul_li.length-1){
+      key=-1;
+      // console.log(gallery_ul.css('left'));
+      console.log('key 값이 4에 도달하였으므로 초기화합니다.');
+      console.log('현재 left 좌표는 '+gallery_ul_left*key+' px 입니다.');
+      console.log('배열의 원소 갯수는 총 '+gallery_ul_li.length+'개 입니다.');
+
+      gallery_ul.delay(0).animate({left:-gallery_ul_li*key},0);
+
+    }
+    //아래는 키값에 따라 클래스값을 넣어주고
+    //나머지 형제들은 클래스를 제거해주는 제이쿼리 코드이다.
+    items_ul_li.eq(key).addClass('on').siblings().removeClass('on');
+
+  }
+
+  var setInt=setInterval(autoGallery,2000);
+
+// 수동 구현 해보자
+
+
+
+
+
+
+
+  $('.arrow').hover(
+    function(){
+      clearInterval(setInt);
+    },
+    function(){
+      setInt = setInterval(autoGallery,2000);
+    }
+  )
+
+  // 어펜드로 뒤에 추가하는 방법
+  // function appendAni(){
+  //
+  //     $('.gallery>ul').append($('.gallery>ul>li').eq(0))
+  //
+  // }
+  //
+  // setInt = setInterval(appendAni,1000);
+
+
+
+
+
+</script>
+</body>
+</html>

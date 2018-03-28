@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+
+        *{margin: 0;padding: 0}
+
+        ul,ol,li{list-style: none}
+
+        .box{
+
+            width: 1000Px;
+
+            height: 600px;
+
+            background: #ccc;
+
+            margin: 0 auto;
+
+            position: relative;
+
+            overflow: hidden;
+
+                
+
+        }
+
+        .box ul{
+
+            width: 500%;
+
+            height: 600px;
+
+            overflow: hidden;
+
+            position: absolute;
+
+        }
+
+        .box ul>li{
+
+            width: 20%;
+
+            height: 600px;
+
+            float: left;
+
+            font-size: 50px;
+
+            border: 1px solid;
+
+            box-sizing: border-box;
+
+        }
+
+        .box span.btn{
+
+            display: block;
+
+            width: 50px;
+
+            height: 50px;
+
+            background: #F00;
+
+            position: absolute;
+
+            top: 300PX;
+
+            
+
+        }
+
+        .box span.btn.left{
+
+            LEFT:50PX;
+
+        }
+
+        .box span.btn.right{
+
+            right:50PX;
+
+        }
+
+    
+
+    </style>
+
+</head>
+
+<body>
+
+   
+
+   <div class="box">
+
+       <ul>
+
+           <li>MANSO1</li>
+
+           <li>MANSO2</li>
+
+           <li>MANSO3</li>
+
+           <li>MANSO4</li>
+
+           <li>MANSO1</li>
+
+       </ul>
+
+       <span class="btn left"></span>
+
+       <span class="btn right"></span>
+
+   </div>
+
+   <script>
+
+       var num=0;
+
+    function son(){
+
+        console.log(-num);    
+
+        if(num==4){
+
+           $('.box ul').delay(0).animate({left:0+"px"},0);
+            num=0;
+           //continue;
+        }
+
+        num+=1;
+
+        $('.box ul').delay(500).animate({left:-num*1000+"px"},500);  
+
+    }
+
+      var setIn= setInterval(son,3000);
+       $('span.btn').hover(
+
+           function(){
+
+               clearInterval(setIn);
+
+           },function(){
+
+               setIn= setInterval(son,3000);
+
+           }
+
+        );
+
+       $('span.btn.left').on('click',function(){
+
+           if(num==4) {
+
+                $('.box ul').delay(0).animate({left:0+"px"},0);
+
+            num=0;
+
+           }
+
+           
+
+           num+=1;
+
+           $('.box ul').animate({left:-num*1000+"px"},500);  
+
+       });
+
+       $('span.btn.right').on('click',function(){
+
+           if(num==0) {
+
+                $('.box ul').delay(0).animate({left:-4000+"px"},0);
+
+            num=4;
+
+           }
+
+           num-=1;
+
+           $('.box ul').animate({left:-num*1000+"px"},500);  
+
+       });
+
+       
+
+    </script>
+
+    
+
+</body>
+
+</html>
