@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/silsp2.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrap">
+    <div class="nav">
+      <ul>
+        <li>GALLERY1</li>
+        <li>GALLERY2</li>
+        <li>GALLERY3</li>
+        <li>GALLERY4</li>
+        <li>GALLERY5</li>
+        <li>GALLERY6</li>
+      </ul>
+      <span class="arrow arrow_left"></span>
+      <span class="arrow arrow_right"></span>
+      <div class="items">
+        <ul>
+          <li class="on"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+
+  var nav_li=$('.nav>ul>li');
+  var nav_li_length=nav_li.length;
+  var items_li=$('.items>ul>li');
+  var arrow=$('span.arrow');
+  var arrow_left=$('.arrow_left');
+  var arrow_right=$('.arrow_right');
+
+
+  var idx=-1;
+
+  function fadeAutoGallery(e){
+
+    if(idx>nav_li_length-2){
+      idx=-1;
+    }
+
+    idx++;
+    nav_li.eq(idx).fadeIn(100).siblings().fadeOut(400);
+    console.log(idx)
+    items_li.eq(idx).addClass('on').siblings().removeClass('on');
+
+  }
+
+  var setIn=setInterval(fadeAutoGallery,1000);
+
+  items_li.on('click',function(e){
+    var key = $(this).index();
+    nav_li.eq(key).fadeIn(300).siblings().fadeOut(200);
+    items_li.eq(key).addClass('on').siblings().removeClass('on');
+    console.log(key)
+    idx = key;
+  });
+
+  items_li.hover(
+    function(e){
+      clearInterval(setIn);
+    },
+    function(e){
+      setIn=setInterval(fadeAutoGallery,1000);
+    }
+  );
+
+
+
+  arrow.hover(
+    function(e){
+      clearInterval(setIn);
+    }, function(e){
+        setIn=setInterval(fadeAutoGallery, 1000)
+    }
+  )
+
+  arrow_left.on('click',function(e){
+    console.log('바뀌기 전 : '+idx);
+    key = idx - 1 ;
+
+    if(key<0){
+      key = nav_li_length-1;
+    }
+
+    console.log('바뀐후 : '+key);
+
+    nav_li.eq(key).fadeIn(300).siblings().fadeOut(200);
+    items_li.eq(key).addClass('on').siblings().removeClass('on');
+
+    idx = key;
+  })
+
+  arrow_right.on('click',function(e){
+    console.log('바뀌기 전 : '+idx);
+    key = idx + 1 ;
+
+    if(key>nav_li_length-1){
+      key = 0;
+    }
+
+    console.log('바뀐후 : '+key);
+
+    nav_li.eq(key).fadeIn(300).siblings().fadeOut(200);
+    items_li.eq(key).addClass('on').siblings().removeClass('on');
+
+    idx = key;
+  })
+
+
+
+  </script>
+
+
+</body>
+</html>

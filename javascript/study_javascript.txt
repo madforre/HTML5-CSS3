@@ -1992,7 +1992,7 @@ https://www.w3schools.com/jquery/jquery_traversing.asp 참고
 
 	- 지정된 표현식과 일치하는 요소들 조회
 
-3.  is(표현식) : "있느냐?"
+3. is(표현식) : "있느냐?"
 
 	- 조회한 요소들 중 표현식을 만족하는 요소가 있으면
 	true(하나라도 있으면) 없으면 false
@@ -2058,3 +2058,103 @@ $(selector).offset({top:value,left:value})
 
 Set offset coordinates using a function:
 $(selector).offset(function(index,currentoffset))
+
+---------------------------------
+
+jQuery
+
+Traversing(탐색)
+
+1. find()
+
+Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
+
+The find() method returns descendant elements of the selected element.
+
+A descendant is a child, grandchild, great-grandchild, and so on.
+
+
+2. add()
+
+Create a new jQuery object with elements added to the set of matched elements.
+
+The add() method adds elements to an existing group of elements.
+
+
+3. next()
+
+Get the immediately following sibling of each element in the set of matched elements.
+If a selector is provided, it retrieves the next sibling only if it matches that selector.
+
+The next() method returns the next sibling element of the selected element.
+
+4. nextAll()
+
+Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.
+
+The nextAll() method returns all next sibling elements of the selected element.
+
+Sibling elements are elements that share the same parent.
+
+
+5. prev()
+
+Get the immediately preceding sibling of each element in the set of matched elements.
+If a selector is provided, it retrieves the previous sibling only if it matches that selector.
+
+The prev() method returns the previous sibling element of the selected element.
+
+Sibling elements are elements that share the same parent.
+
+6. prevAll()
+
+Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector.
+
+returns all previous sibling elements of the selected element
+
+7. siblings()
+
+Get the siblings of each element in the set of matched elements, optionally filtered by a selector.
+
+The siblings() method returns all sibling elements of the selected element.
+
+조회한 요소의 모든 형제 요소(자신은 제외) 선택
+
+8. parent()
+
+Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
+
+조회한 요소의 부모 요소
+
+9. children()
+
+Get the children of each element in the set of matched elements, optionally filtered by a selector.
+
+조회한 요소의 자식 요소
+
+--------------------------
+
+.animate() >> scrollTop << 속성
+
+.animate({속성:'값'},시간,함수);
+
+---------------------------
+
+effect
+
+.fadeIn() "서서히 시간만큼 나타나라~~" none >> block
+.fadeOut() "서서히 시간만큼 사라져라~~" block >> none
+.fadeToggle()
+
+.fadeIn(시간,콜백);
+
+.fadeIn();//400
+.fadeIn(1000,function(e){
+		alert("dd");
+})
+
+------------------------
+
+jQuery resize() Method
+
+The resize event occurs when the browser window changes size.

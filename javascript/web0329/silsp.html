@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+  <div id="wrap">
+    <div class="section">Section1
+      <div class="line"></div>
+    </div>
+    <div class="section">Section2
+      <div class="line"></div>
+    </div>
+    <div class="section">Section3
+      <div class="line"></div>
+    </div>
+    <div class="section">Section4
+      <div class="line"></div>
+    </div>
+    <div class="section">Section5
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <div class="items">
+    <ul>
+      <li class="on"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <script>
+    var items=$('.items');
+    var items_li=$('.items>ul>li');
+
+    for(var i=0;i<items_li.length;i++){
+      
+    }
+
+
+
+    items_li.on('click',function(e){
+      console.log($(this).index());
+      var index = $(this).index();
+      var top = $('.section').eq(index).offset().top;
+      console.log(top);
+
+      // 수업 코드
+
+      $(this).addClass('on').siblings().removeClass('on');
+
+      // 내 코드--------------------------
+
+      // items_li.eq(index).addClass('on')
+      // .siblings().removeClass('on');
+
+      // --------------------------------
+
+      // $('.section').eq(index).css({'background' :'#fff'})
+
+      $('.section').eq(index).find('.line').animate({width:'70%'},150)
+      $('html,body').animate({scrollTop:top},200,function(e){
+        $('.section').eq(index).siblings().find('.line').animate({width:'0'})
+
+        $('.section').eq(index).css({'background' :'url(img/bg'+(index+1)+'.jpg)'})
+        .siblings().css({'background' :'#adf'});
+        $('.section').eq(index).css({'color' :'#fff'})
+        .siblings().css({'color' : '#000'});
+        $('.section').eq(index).css({'font-size' :'70px'})
+        .siblings().css({'font-size' :'40px'});
+
+
+      //콜백함수위치
+      });
+    });
+
+  </script>
+
+
+</body>
+</html>

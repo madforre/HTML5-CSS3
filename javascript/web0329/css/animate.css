@@ -1,0 +1,51 @@
+body{
+  overflow : hidden;
+}
+
+#wrap{
+  width : 100%;
+  height : 100%;
+}
+
+.section{
+  width : 100%;
+  height : 100%;
+  font-size: 40px;
+  border : 5px solid #00b;
+  box-sizing: border-box;
+  color : #005;
+
+}
+
+.items{
+  width : auto;
+  height : auto;
+  position : fixed;
+  border : 1px solid #f00;
+  top : 250px;
+  right : 30px;
+}
+
+.items >ul>li{
+  width : 20px;
+  height : 20px;
+  border : 1px solid;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.items > ul > li:hover{
+
+  cursor: pointer;
+  background: #acc;
+}
+
+.on {
+  background: #555;
+}
+
+.line{
+  width : 0%;
+  height : 5%;
+  background: #48f;
+}

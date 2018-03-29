@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>traversing</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+  .on{
+    background: #f00;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="gnb">
+  <ul>
+    <li class="one">
+      <a href="#">menu</a>
+      <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
+    </li>
+    <li class="two">
+      <a href="#">menu</a>
+      <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
+    </li>
+    <li class="three">
+      <a href="#">menu</a>
+      <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
+    </li>
+    <li class="four">
+      <a href="#">menu</a>
+      <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
+    </li>
+    <li class="five">
+      <a href="#">menu</a>
+      <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
+    </li>
+  </ul>
+  <p>내게 색깔을 줘</p>
+
+  </div>
+
+  <script>
+    var gnb=$('.gnb');
+    var one=$('.one');
+
+    var gnb_li=$('.gnb>ul>li');
+
+    gnb.find('a').css({'background':'#ff0','border':'1px solid #000'});
+    one.find('a').css({'color':'#f00'});
+    // gnb.find('.one').css({'background':'#ccc'});
+    // gnb_li.eq(1).next().css({'background' : '#fda'});
+
+    gnb_li.on('click',function(e){
+
+      if($(this).index()==gnb_li.length-1){
+
+        console.log($(this).index());
+        // gnb_li.eq(0).addClass('on')
+        gnb_li.first().addClass('on')
+        .siblings().removeClass('on');
+
+      } else {
+        $(this).next().addClass('on')
+        .siblings().removeClass('on');
+        console.log($(this).index());
+      }
+
+      // alert($(this).index());
+      // $(this).next().css({'background':'#5a5'})
+      // .siblings().css({'background' : '#5dc'});
+    });
+
+    // $("div").add('p').css({'background' : '#f00'})
+
+  </script>
+
+</body>
+</html>
