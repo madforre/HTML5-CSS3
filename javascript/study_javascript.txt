@@ -2158,3 +2158,64 @@ effect
 jQuery resize() Method
 
 The resize event occurs when the browser window changes size.
+
+
+------------------------
+
+1. hide()
+
+	The hide() method hides the selected elements.
+
+2. show()
+
+	The show() method shows the hidden, selected elements.
+
+3
+
+	slideDown()
+
+		The jQuery slideDown() method is used to slide down an element.
+
+	slideUp()
+
+		The jQuery slideUp() method is used to slide up an element.
+
+	slideToggle()
+
+		The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+
+	슬라이드
+
+4. stop()
+
+	The stop() method stops the currently running animation for the selected elements.
+
+5. callback (콜백함수)
+
+	A callback function is executed after the current effect is 100% finished.
+
+	jQuery Callback Functions
+
+	JavaScript statements are executed line by line.
+	However, with effects, the next line of code can be run even though the effect is not finished.
+	This can create errors.
+	To prevent this, you can create a callback function.
+
+	A callback function is executed after the current effect is finished.
+
+	Typical syntax: $(selector).hide(speed,callback);
+
+
+
+6. Method Chaining
+
+	To chain an action, you simply append the action to the previous action.
+
+	The following example chains together the css(), slideUp(), and slideDown() methods.
+	The "p1" element first changes to red, then it slides up, and then it slides down:
+
+
+	   Example
+
+
+		$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
