@@ -10,10 +10,14 @@
 <link rel="stylesheet" href="css/index.css">
 <body>
 <div id="wrap">
-  <div class="contents">
+  <div class="contents top">
     <div class="header">
       <div class="logo">
-          <h1>Logo</h1>
+         <h1>
+            <a href="/" title="home">
+            <span class="bc_logo"></span>
+             </a>
+         </h1>
       </div>
       <div class="aside">
         <h2>ad</h2>
@@ -21,26 +25,35 @@
 
     </div>
     <div class="nav">
+      <div class="gnb">
 
-      <ul>
-        <li>그림판</li>
-        <li>검색</li>
-        <li>게시판</li>
-      </ul>
+          <ul>
+            <li>글</li>
+            <li>그림</li>
+            <li>게임
+                <div class="game"></div>
+            
+            </li>
+            <li>음악</li>
+            <li>게시판</li>
+          </ul>
+      </div>
 
     </div>
+</div>
+<div class="contents">
     <div class="section">
 
       <div class="section_left">
 
         <div class="best">
-            이주의 그림
+            Top 10
         </div>
         <div class="daily">
           <br>
 
           일상 그림<br>
-  
+
           2칸에 137.5
           1칸에 68.75
           687.5px
@@ -59,7 +72,7 @@
 
       <div class="section_right">
         <div class="user_wrap">
-          <form action="login.php">
+          <form action="login.php" method="post">
             <ul>
               <div class="login">
                 <li>
@@ -95,7 +108,7 @@
 
 
     </div>
-  </div>
+ </div>
 </div>
 
 </body>
