@@ -2219,3 +2219,45 @@ The resize event occurs when the browser window changes size.
 
 
 		$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+
+-------------------------------
+
+스크롤 값 따기
+
+$(window).on('scroll', function(e){
+    var html_top = $('html').scrollTop();
+    console.log(html_top);
+
+})
+
+------------------------------
+
+정중앙배치를 해보자!
+
+$(window).on('resize'.function(e){
+
+//location.reload();
+
+
+var bodyWidth=$('body').width(); // 전체 너비
+var bodyHeight=$('body').height(); // 전체 높이
+var contentsWidth=contents.width(); 자신 너비
+var contentsHeight=contents.height(); 자신 높이
+
+
+항상 정중앙 배치
+var contentsLeft = bodyWidth/2 - contentsWidth/2;
+var contentsTop = bodyHeight/2 - contentsHeight/2;
+
+// 가로위치 = 전체 너비/2 - 자신의 너비/2
+// 세로위치 = 전체 높이/2 - 자신의 높이/2
+
+});
+
+-------------------------------
+
+if($('.popup').is(":visible")){
+     // display : none가 아닐 경우
+}else{
+     // display : none일 경우
+}
